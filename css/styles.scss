@@ -6,6 +6,23 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Poppins;
+    
+    // custom scroll-bar
+    &::-webkit-scrollbar {
+        border-radius: 10px;
+        height: 10px;
+        width: 8px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+        background: $coolOrange;
+        border-radius: 10px;
+    }
+  
+    &::-webkit-scrollbar-track {
+        background-color: $coolIndigo;
+        border-radius: 10px;
+    }
 }
 
 body{
@@ -146,27 +163,25 @@ section{
 
     /* Slideshow container */
     .slideshow-container {
-        max-width: 80%;
+        max-width: 100%;
         position: relative;
         margin: auto;
     }
-    
+
     .slides{
         display: none;
         justify-content: space-evenly;
-        background:white;
-        border-radius: 15px;
-    
+        
         .imgCol{
-            display: inline-flex;
+            display: flex;
             position: relative;
             height: 35vw;
-            width: 32%;
+            width: 33%;
             line-height: 100px;
             overflow: hidden;
             border: solid 1px #000;
-            margin-left: 5px;
-            margin-right: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
             margin-top: 10px;
             margin-bottom: 10px;
             border-radius: 5px;          
@@ -178,7 +193,7 @@ section{
                 object-position: 56%;
             }
             #img3{
-                object-position: 50%;
+                object-position: 65%;
             }
         }
 
@@ -199,25 +214,27 @@ section{
     /* Next & previous buttons */
     .prev, .next {
         cursor: pointer;
+        background-color: rgba(0,0,0,0.8);
         position: absolute;
-        top: 50%;
+        top: 20%;
         width: auto;
         padding: 16px;
+        padding-top: 10vw;
+        padding-bottom: 10vw;
         margin-top: -22px;
-        margin-left: -5%;
-        margin-right: -5%;
+        margin-left: 0.7vw;
+        margin-right: 0.7vw;
         color: white;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 1.5vw;
         transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
+        border-radius: 5px;
         user-select: none;
     }
 
     /* Position the "next button" to the right */
     .next {
         right: 0;
-        border-radius: 3px 0 0 3px;
     }
   
     /* On hover, add a black background color with a little bit see-through */
@@ -247,7 +264,7 @@ section{
     }
   
     .active, .dot:hover {
-        background-color: #717171;
+        background-color: $coolOrange;
     }
     
     /* Fading animation */

@@ -6,6 +6,22 @@
   font-family: Poppins;
 }
 
+*::-webkit-scrollbar {
+  border-radius: 10px;
+  height: 10px;
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #f18f01;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #090363a1;
+  border-radius: 10px;
+}
+
 body {
   background-color: #202020;
 }
@@ -187,7 +203,7 @@ section h2 {
 }
 
 .about .slideshow-container {
-  max-width: 80%;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
@@ -197,22 +213,20 @@ section h2 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background: white;
-  border-radius: 15px;
 }
 
 .about .slides .imgCol {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   height: 35vw;
-  width: 32%;
+  width: 33%;
   line-height: 100px;
   overflow: hidden;
   border: solid 1px #000;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -229,8 +243,8 @@ section h2 {
 }
 
 .about .slides .imgCol #img3 {
-  -o-object-position: 50%;
-     object-position: 50%;
+  -o-object-position: 65%;
+     object-position: 65%;
 }
 
 .about .slides img {
@@ -249,19 +263,22 @@ section h2 {
 
 .about .prev, .about .next {
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
-  top: 50%;
+  top: 20%;
   width: auto;
   padding: 16px;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
   margin-top: -22px;
-  margin-left: -5%;
-  margin-right: -5%;
+  margin-left: 0.7vw;
+  margin-right: 0.7vw;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.5vw;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 5px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -270,7 +287,6 @@ section h2 {
 
 .about .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 .about .prev:hover, .about .next:hover {
@@ -298,7 +314,7 @@ section h2 {
 }
 
 .about .active, .about .dot:hover {
-  background-color: #717171;
+  background-color: #f18f01;
 }
 
 .about .fade {
