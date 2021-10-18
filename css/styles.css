@@ -230,6 +230,11 @@ section h2 {
      object-position: 56%;
 }
 
+.about .slides .imgCol #img3 {
+  -o-object-position: 50%;
+     object-position: 50%;
+}
+
 .about .slides img {
   max-width: 100%;
   max-height: 100%;
