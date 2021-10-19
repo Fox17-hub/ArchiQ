@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css">
+    
+    <!-- -->
+    <script type="text/javascript" src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <!-- -->
     <title>Arch-iQ</title>
 </head>
 <body>
@@ -22,52 +27,40 @@
         <div class="content">
             <h2>Intelligence at it's finest</h2>
             <p>Lorem Ipsum</p>
-            <i class="fa fa-angle-double-down"></i>
+            <a href="#missions"><i class="fa fa-angle-double-down"></i></a>
         </div>
     </div>
-    <br>
+    <hr id="blurred-hr">
     <section class="about">
-        <div class="contentBx">
-            <h2 class="heading">Nos missions</h2>
-            <div class="slideshow-container">
-                
-                <!-- The dots/circles -->
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+        <div class="contentBx"></div>
+            <div class="heading">
+                <h2 id="missions">Nos missions</h2>
+            </div>
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+                                <img src="./img/150505-F-SI788-099.jpg">
+                            </div>
+                            <p>Slide 01: Lorem Ipsum Dolor Sit Amet</p>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+                                <img src="./img/b3c67e9e54bd3f0deeab60281277a569.png">
+                            </div>
+                            <p>Slide 02: Lorem Ipsum Dolor Sit Amet</p>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+                                <img src="./img/75148313_l.jpeg">
+                            </div>
+                            <p>Slide 03: Lorem Ipsum Dolor Sit Amet</p>
+                        </li>
+                    </ul>
                 </div>
                 
-                <div class="slides fade">
-                    <div class="imgCol">
-                        <img id="img1" src="./img/Singapore-Aerial-view-Cool-Tech.jpg">
-                    </div>
-                    <div class="slideText">1/x</div>
-                    <div class="imgCol">
-                        <img id="img2" src="./img/75148313_l.jpeg">
-                    </div>
-                    <div class="slideText">2/x</div>
-                    <div class="imgCol">
-                        <img id="img3" src="./img/150505-F-SI788-099.jpg">
-                    </div>
-                    <div class="slideText">3/x</div>
-                </div>
-                <div class="slides fade">
-                    <div class="imgCol">
-                        <img id="img3" src="./img/150505-F-SI788-099.jpg">
-                    </div>
-                    <div class="slideText">3/x</div>
-                </div>
-                <div class="slides fade">
-                    <div class="imgCol">
-                        <img id="img3" src="./img/150505-F-SI788-099.jpg">
-                    </div>
-                    <div class="slideText">3/x</div>
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+               
             </div>
         
             <hr>
@@ -79,7 +72,9 @@
     </section>
     <br>
     <section class="innovations">
-        <h1 class="heading">Innovations</h1>
+        <div class="heading">
+            <h2>Innovations</h2>
+        </div>
             <div class="chiffres">
                 <h2>En chiffre</h2>
                 <div class="grid">
@@ -100,5 +95,7 @@
      
     <div class="contact"></div>
     <script src="script.js"></script>
+    
+    
 </body>
 </html>

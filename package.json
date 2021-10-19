@@ -1,0 +1,23 @@
+{
+  "name": "archiq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "@splidejs/splide": "^3.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fox17-hub/ArchiQ.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fox17-hub/ArchiQ/issues"
+  },
+  "homepage": "https://github.com/Fox17-hub/ArchiQ#readme"
+}

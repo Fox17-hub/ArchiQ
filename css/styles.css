@@ -4,6 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Poppins;
+  scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
@@ -24,6 +25,20 @@
 
 body {
   background-color: #202020;
+}
+
+body #blurred-hr {
+  height: 0px;
+  width: 100%;
+  background-color: black;
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 0px 60px 60px black;
+          box-shadow: 0px 0px 60px 60px black;
+  position: relative;
+  border: none;
 }
 
 .banner {
@@ -74,7 +89,7 @@ body {
 .banner .content .fa {
   font-size: 40px;
   line-height: 40px;
-  color: #f18f01;
+  color: white;
   width: 50px;
   height: 50px;
   position: absolute;
@@ -88,6 +103,10 @@ body {
   width: 50px;
   text-align: center;
   vertical-align: baseline;
+}
+
+.banner .content .fa:hover {
+  color: #f18f01;
 }
 
 header {
@@ -130,18 +149,23 @@ section .heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  font-size: 5vw;
+  font-size: 4vw;
+  margin-top: 30px;
   padding-top: 1vw;
   padding-bottom: 1vw;
   background-color: #090363a1;
-  border-bottom: solid white;
+  -webkit-box-shadow: 0 -5px 15px 5px #090363a1;
+          box-shadow: 0 -5px 15px 5px #090363a1;
+  border-bottom: solid #f18f01;
+  letter-spacing: 1px;
+  padding-left: 15vw;
 }
 
 section .text {
@@ -160,7 +184,7 @@ section .text {
 }
 
 section h2 {
-  font-size: 2.5vw;
+  font-size: 4vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,175 +195,25 @@ section h2 {
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  background-color: #090363a1;
-  border-bottom: solid white;
-  padding-top: 0.5vw;
-  padding-bottom: 0.5vw;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background: white;
+  height: 5px;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0px 2px 10px 0px white;
+          box-shadow: 0px 2px 10px 0px white;
 }
 
 .about {
   position: relative;
   width: 100%;
-  /* Slideshow container */
-  /* Next & previous buttons */
-  /* Position the "next button" to the right */
-  /* On hover, add a black background color with a little bit see-through */
-  /* Number text (1/3 etc) */
-  /* The dots/bullets/indicators */
-  /* Fading animation */
-}
-
-.about .heading {
-  color: white;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-}
-
-.about .slideshow-container {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
-}
-
-.about .slides {
-  display: none;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.about .slides .imgCol {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  height: 35vw;
-  width: 33%;
-  line-height: 100px;
-  overflow: hidden;
-  border: solid 1px #000;
-  margin-left: 2px;
-  margin-right: 2px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-.about .slides .imgCol #img1 {
-  -o-object-position: 40%;
-     object-position: 40%;
-}
-
-.about .slides .imgCol #img2 {
-  -o-object-position: 56%;
-     object-position: 56%;
-}
-
-.about .slides .imgCol #img3 {
-  -o-object-position: 65%;
-     object-position: 65%;
-}
-
-.about .slides img {
-  max-width: 100%;
-  max-height: 100%;
-  vertical-align: middle;
-  -o-object-fit: cover;
-     object-fit: cover;
-  cursor: pointer;
-}
-
-.about .slides img:hover {
-  background-color: black;
-  opacity: 50%;
-}
-
-.about .prev, .about .next {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  top: 20%;
-  width: auto;
-  padding: 16px;
-  padding-top: 10vw;
-  padding-bottom: 10vw;
-  margin-top: -22px;
-  margin-left: 0.7vw;
-  margin-right: 0.7vw;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5vw;
-  -webkit-transition: 0.6s ease;
-  transition: 0.6s ease;
-  border-radius: 5px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.about .next {
-  right: 0;
-}
-
-.about .prev:hover, .about .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.about .slideText {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.about .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  -webkit-transition: background-color 0.6s ease;
-  transition: background-color 0.6s ease;
-}
-
-.about .active, .about .dot:hover {
-  background-color: #f18f01;
-}
-
-.about .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .about .text {
@@ -354,5 +228,46 @@ section h2 {
           align-items: center;
   color: white;
   width: 50%;
+}
+
+.about .splide__slide {
+  padding: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ECF0F1;
+}
+
+.about .splide__slide__container {
+  width: 100%;
+  height: 100%;
+}
+
+.about .splide__slide__container:hover {
+  background-color: #202020;
+  -webkit-box-shadow: 0px 2px 2px 0px white;
+          box-shadow: 0px 2px 2px 0px white;
+}
+
+.about img {
+  height: 500px;
+}
+
+.about p {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: justify;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=styles.css.map */
