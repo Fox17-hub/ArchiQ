@@ -4,7 +4,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
     padding: '5rem',
     perPage: 3,
     rewind : true,
-    
   } );
   splide.mount();
 } );
