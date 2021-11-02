@@ -41,6 +41,12 @@ body #blurred-hr {
   border: none;
 }
 
+body hr {
+  height: 5px;
+  background-color: #f18f01;
+  border: none;
+}
+
 .banner {
   position: relative;
   width: 100%;
@@ -110,10 +116,15 @@ body #blurred-hr {
 }
 
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  z-index: 1;
   width: 100%;
+}
+
+header .navbar {
+  background-color: rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 2px 30px 0px black;
+          box-shadow: 0px 2px 30px 0px black;
   padding: 40px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,19 +135,50 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 10000;
 }
 
-header .logo {
+header .navbar .logo {
   color: white;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 2vw;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
 }
 
-header .toggle {
+header .navbar nav {
+  margin-left: 30%;
+}
+
+header .navbar nav ul {
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+}
+
+header .navbar nav ul li a {
+  height: 80px;
+  width: 100%;
+  margin: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  padding-left: 3.5vw;
+  padding-right: 3.5vw;
+  text-decoration: none;
+  color: white;
+}
+
+header .navbar nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: #f18f01;
+  -webkit-box-shadow: 0px 0px 2px 0px black;
+          box-shadow: 0px 0px 2px 0px black;
+}
+
+header .navbar .toggle {
   position: relative;
   width: 36px;
   height: 28px;
@@ -235,6 +277,11 @@ section h2::after {
   display: flex;
   background: #202020;
   position: relative;
+}
+
+.about .splide__slide__container:hover {
+  -webkit-box-shadow: inset 7px 0px 10px 0px black, inset -5px 0px 10px 0px black;
+          box-shadow: inset 7px 0px 10px 0px black, inset -5px 0px 10px 0px black;
 }
 
 .about .splide__slide__container:hover .slides-text {
