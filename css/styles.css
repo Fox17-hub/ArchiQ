@@ -93,20 +93,18 @@ body hr {
 }
 
 .banner .content .fa {
-  font-size: 40px;
+  font-size: 42px;
   line-height: 40px;
   color: white;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 20vw;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 250px;
   cursor: pointer;
 }
 
 .banner .content .fa .fa-angle-double-down {
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
   text-align: center;
   vertical-align: baseline;
 }
@@ -146,8 +144,15 @@ header .navbar .logo {
   letter-spacing: 1px;
 }
 
-header .navbar nav {
+header .navbar .navMenu {
   margin-left: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navbar .hidden {
+  display: none;
 }
 
 header .navbar nav ul {
@@ -164,8 +169,8 @@ header .navbar nav ul li a {
   margin: 1vw;
   padding-top: 0.5vw;
   padding-bottom: 0.5vw;
-  padding-left: 3.5vw;
-  padding-right: 3.5vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
   text-decoration: none;
   color: white;
 }
@@ -178,13 +183,108 @@ header .navbar nav ul li a:hover {
           box-shadow: 0px 0px 2px 0px black;
 }
 
+header .navbar .barIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  right: 1%;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 header .navbar .toggle {
   position: relative;
-  width: 36px;
-  height: 28px;
-  background: url(/img/icons8-menu-480.png);
   background-size: cover;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+}
+
+header .navbar .toggle:hover {
+  background-color: rgba(255, 255, 255, 0.041);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+header .navbar .toggle #bar1 {
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+
+header .navbar .toggle #bar3 {
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+
+header .navbar .toggle #toggle:checked ~ #bar1 {
+  content: "";
+  background-color: #f18f01;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  visibility: visible;
+  width: 38px;
+}
+
+header .navbar .toggle #toggle:checked ~ #bar3 {
+  content: "";
+  background-color: white;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+  visibility: visible;
+  width: 38px;
+}
+
+header .navbar .toggle #toggle:checked ~ #bar2 {
+  visibility: hidden;
+  -webkit-transition: all 0.6s var(--animation-curve);
+  transition: all 0.6s var(--animation-curve);
+}
+
+header .navbar .toggle .bars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  position: relative;
   cursor: pointer;
+  border-radius: 10px;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+header .navbar .toggle:hover > .bars {
+  background-color: #f18f01;
+}
+
+header .navbar .toggle input {
+  display: none;
 }
 
 section .heading {

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <!-- -->
     <script type="text/javascript" src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <!-- -->
@@ -20,16 +20,25 @@
     <header>
             <div class="navbar">
                 <a href="#" class="logo">Arch-iQ</a>
-                <nav>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Innovations</a></li>
-                        <li><a href="#">Group</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="toggle">
+                <div class="navMenu">
+                    <nav class="hidden">
+                        <ul>
+                            <li class="navPointer"><a href="#missions">About</a></li>
+                            <li class="navPointer"><a href="#">Innovations</a></li>
+                            <li class="navPointer"><a href="#">Group</a></li>
+                            <li class="navPointer"><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
+                <div class="barIcon">
+                    <div class="toggle">
+                        <input type="checkbox" id="toggle">
+                        <label class="bars" id="bar1" for="toggle"></label>
+                        <label class="bars" id="bar2" for="toggle"></label>
+                        <label class="bars" id="bar3" for="toggle"></label>
+                    </div>
+                </div>
+
             </div>
         </header>
     <div class="banner">
