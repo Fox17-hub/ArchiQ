@@ -23,83 +23,63 @@ document.addEventListener( 'DOMContentLoaded', function() {
 /*
 // -------------------------
 
+/*
+HTML
+class="hidden"
 
-function show() {
-  var x = document.querySelector('.navMenu');
-  if (x.style.display === 'none') {
-    x.style.display = 'flex';
-  } else {
-    x.style.display = 'none';
-  }
+CSS
+.hidden { 
+  display:none;
 }
 
-// --------------------------
-
-/*
-(function() {
-
-	let hamburger = {
-		nav = document.querySelector('nav'),
-		navToggle = document.querySelector('.toggle'),
-
-		initialize() {
-			this.navToggle.addEventListener('click',
-        () => { this.toggle(); });
-		},
-
-		toggle() {
-
-			this.navToggle.classList.toggle('expanded');
-      
-			nav.style.display = "flex";
-      this.nav.classList.toggle('expanded');
-      
-    },
-	};
-
-	hamburger.initialize();
-
-}());
-*/
-
-//------------------
-
-/*
-document.querySelector(".toggle").addEventListener("click", show);
-
-function show(){
-   document.querySelectorAll("nav").forEach(function(item){
-      item.classList.remove("hidden");
-   });
+.notHidden{
+  display: flex;
 }
 
-document.querySelector("nav").addEventListener("click", hide);
-
-function hide(){
-  document.querySelectorAll("nav").forEach(function(item){
-    item.classList.toggle("hidden");
-});
-}*/
-
-/*
-//expand clickable area
-document.querySelector(".toggle").addEventListener('click', e => {
-  document.querySelector("input").click();
-});*/
 
 var nav = document.querySelector('nav');
 var transf = document.getElementById('toggle');
 var icon = document.querySelector('.barIcon').addEventListener('click', i => {
+
   if (nav.classList = 'hidden') {
     nav.classList.remove('hidden');
     transf.checked = true;
     console.log('opps');
   } 
   else {
-    nav.classList.toggle('hidden');
+    nav.classList.add('hidden');
     transf.checked = false;
     console.log('shit');
   }
   console.log(nav.classList);
   console.log(transf.checked);
-})
+});*/
+
+/*
+function toggle() {
+  var nav = document.querySelector('nav');
+  if (nav.style.display === 'none') {
+  nav.style.display = 'flex';
+  document.getElementById('toggle').checked = true;
+  console.log('opps');
+  }
+  else { 
+    nav.style.display = 'none';
+    document.getElementById('toggle').checked = false;
+    console.log('shit');
+  }
+}*/
+
+function toggle() {
+  var nav = document.querySelector('nav');
+  if (nav.style.opacity === '1') {
+    nav.style.opacity = '0';
+    document.getElementById('toggle').checked = false;
+    console.log('hide');
+  }
+  else { 
+    nav.style.opacity = '1';
+    document.getElementById('toggle').checked = true;
+    console.log('show');
+  }
+}
