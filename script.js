@@ -8,22 +8,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
   } );
   splide.mount();
 } );
-/*
-document.addEventListener( 'DOMContentLoaded', function() {
-  var navBtn = document.querySelector('.toggle');
-  var openNav = function(){
-    var 
-  }
-  for (var i = 0; i < navBtn.length; i++) {
-    navBtn[i].addEventListener('click', openNav)
-  }
-}
-);
-*/
-/*
-// -------------------------
 
-/*
+/* SOLUTION 1: CLASS HIDDEN
 HTML
 class="hidden"
 
@@ -31,17 +17,13 @@ CSS
 .hidden { 
   display:none;
 }
-
-.notHidden{
-  display: flex;
-}
-
+        
 
 var nav = document.querySelector('nav');
 var transf = document.getElementById('toggle');
-var icon = document.querySelector('.barIcon').addEventListener('click', i => {
+var icon = document.querySelector('.iconBtn').addEventListener('click', i => {
 
-  if (nav.classList = 'hidden') {
+  if (nav.classList.contains('hidden')) {
     nav.classList.remove('hidden');
     transf.checked = true;
     console.log('opps');
@@ -55,30 +37,24 @@ var icon = document.querySelector('.barIcon').addEventListener('click', i => {
   console.log(transf.checked);
 });*/
 
-/*
-function toggle() {
-  var nav = document.querySelector('nav');
-  if (nav.style.display === 'none') {
-  nav.style.display = 'flex';
-  document.getElementById('toggle').checked = true;
-  console.log('opps');
-  }
-  else { 
-    nav.style.display = 'none';
-    document.getElementById('toggle').checked = false;
-    console.log('shit');
-  }
-}*/
+
+// SOLUTION 2: x.style.opacity
 
 function toggle() {
   var nav = document.querySelector('nav');
-  if (nav.style.opacity === '1') {
+  if (nav.style.display === 'flex' && nav.style.opacity === '1') {
     nav.style.opacity = '0';
     document.getElementById('toggle').checked = false;
+    window.setTimeout(function() {
+    nav.style.display = 'none';
+    },350);
     console.log('hide');
   }
-  else { 
+  else {
+    nav.style.display = 'flex';
+    window.setTimeout(function() {
     nav.style.opacity = '1';
+    }, 100);
     document.getElementById('toggle').checked = true;
     console.log('show');
   }

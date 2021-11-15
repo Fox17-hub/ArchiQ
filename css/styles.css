@@ -105,6 +105,8 @@ body hr {
           justify-content: center;
   top: 250px;
   cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .banner .content .fa .fa-angle-double-down {
@@ -136,6 +138,16 @@ header .navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+header .navbar:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px -10px 10px -10px rgba(255, 255, 255, 0.7);
+          box-shadow: inset 0px -10px 10px -10px rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 header .navbar .logo {
@@ -149,7 +161,8 @@ header .navbar .logo {
 }
 
 header .navbar .navMenu {
-  margin-left: 40%;
+  margin-right: 5%;
+  margin-left: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,8 +170,9 @@ header .navbar .navMenu {
 
 header .navbar nav {
   opacity: 0;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
+  display: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 header .navbar nav ul {
@@ -179,23 +193,23 @@ header .navbar nav ul li a {
   padding-right: 2vw;
   text-decoration: none;
   color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 header .navbar nav ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
   color: #f18f01;
-  -webkit-box-shadow: 0px 0px 2px 0px black;
-          box-shadow: 0px 0px 2px 0px black;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-box-shadow: 0px 11px 10px -10px rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 11px 10px -10px rgba(255, 255, 255, 0.7);
+  padding-bottom: 3px;
 }
 
 header .navbar .iconBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  position: absolute;
+  right: 5%;
   cursor: pointer;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -220,12 +234,12 @@ header .navbar .toggle {
   padding: 1vw;
   padding-left: 1.5vw;
   padding-right: 1.5vw;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 header .navbar .toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 header .navbar .toggle label > #bar1 {
@@ -275,8 +289,8 @@ header .navbar .toggle label > .bars {
   background-color: white;
   position: relative;
   border-radius: 10px;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -305,25 +319,16 @@ section {
 }
 
 section .heading {
-  position: relative;
+  position: absolute;
   z-index: 1;
   width: 100%;
-  left: -35%;
-  display: block;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 4vw;
-  padding-top: 1vw;
+  height: 150px;
+  left: -20%;
+  display: inline-block;
+  margin-top: 10vw;
   padding-bottom: 1vw;
-  padding-left: 30%;
   border-radius: 50px;
   letter-spacing: 1px;
-  margin-bottom: 5%;
-  margin-top: 0.5vw;
 }
 
 section .heading #line {
@@ -331,43 +336,13 @@ section .heading #line {
   height: 4%;
   position: absolute;
   background-color: white;
-  left: 30%;
+  left: 11%;
   -webkit-box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.8);
           box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
 
-section .textBx {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  width: 100%;
-}
-
-section .textBx p {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-section .textBx #text1 {
-  font-size: 22px;
-  text-align: center;
-  background: linear-gradient(15deg, #0e0768f5 20%, #f18f01 90%);
-  padding-top: 5vw;
-  padding-bottom: 5vw;
-}
-
-section .textBx #text2 {
-  width: 50%;
-  background-color: #0e0768f5;
-  padding: 10rem;
-}
-
-section h2 {
+section h1 {
   font-size: 4vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,8 +354,6 @@ section h2 {
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  position: relative;
-  padding-left: 10%;
   /*
         //souligné + border rond
         &::after{
@@ -395,6 +368,75 @@ section h2 {
             box-shadow: 0px 2px 10px 0px white;
         }
         */
+}
+
+section h2 {
+  font-size: 4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  /*
+        //souligné + border rond
+        &::after{
+            content:'';
+            position:absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            background:white;
+            height: 5px;
+            border-radius: 10px 10px 10px 10px;
+            box-shadow: 0px 2px 10px 0px white;
+        }
+        */
+}
+
+section .textBx {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  width: 100%;
+}
+
+section .textBx p {
+  padding: 10vw;
+  padding-left: 25vh;
+  padding-right: 25vh;
+  padding-top: 25vw;
+}
+
+section .textBx #text1 {
+  width: 100%;
+  font-size: 22px;
+  text-align: center;
+  background: #0e0768f5;
+  padding-bottom: 5vw !important;
+  position: relative;
+}
+
+section .textBx #text2 {
+  position: relative;
+  width: 50%;
+  left: 50%;
+  font-size: 20px;
+  text-align: justify;
+  background-color: #0e0768f5;
+  padding: 10rem !important;
+}
+
+section .textBx #text3 {
+  position: relative;
+  width: 50%;
+  font-size: 20px;
+  text-align: justify;
 }
 
 .about {
@@ -547,5 +589,36 @@ section h2 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.innovations {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: linear-gradient(15deg, #0e0768f5 20%, #f18f01 90%);
+}
+
+.innovations #circle {
+  z-index: 1;
+  left: 20%;
+  margin-top: -20%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: white;
+  width: 700px;
+  height: 700px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
 }
 /*# sourceMappingURL=styles.css.map */
