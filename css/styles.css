@@ -105,8 +105,8 @@ body hr {
           justify-content: center;
   top: 250px;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .banner .content .fa .fa-angle-double-down {
@@ -138,16 +138,14 @@ header .navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 header .navbar:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: inset 0px -10px 10px -10px rgba(255, 255, 255, 0.7);
           box-shadow: inset 0px -10px 10px -10px rgba(255, 255, 255, 0.7);
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
 }
 
 header .navbar .logo {
@@ -217,6 +215,15 @@ header .navbar .iconBtn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  width: 4vw;
+  height: 4vw;
+}
+
+header .navbar .iconBtn:hover {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 header .navbar .toggle {
@@ -234,12 +241,6 @@ header .navbar .toggle {
   padding: 1vw;
   padding-left: 1.5vw;
   padding-right: 1.5vw;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-header .navbar .toggle:hover {
-  background: rgba(0, 0, 0, 0.5);
 }
 
 header .navbar .toggle label > #bar1 {
@@ -259,19 +260,23 @@ header .navbar .toggle label > #bar3 {
 header .navbar .toggle #toggle:checked ~ label > #bar1 {
   content: "";
   background-color: #f18f01;
-  -webkit-transform: rotateZ(45deg);
-          transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg) translate(3px, -3px);
+          transform: rotateZ(45deg) translate(3px, -3px);
   visibility: visible;
   margin: 0;
+  -webkit-box-shadow: 0px 0px 10px 0px #f18f01;
+          box-shadow: 0px 0px 10px 0px #f18f01;
 }
 
 header .navbar .toggle #toggle:checked ~ label > #bar3 {
   content: "";
   background-color: white;
-  -webkit-transform: rotateZ(-45deg);
-          transform: rotateZ(-45deg);
+  -webkit-transform: rotateZ(-45deg) translate(3px, 3px);
+          transform: rotateZ(-45deg) translate(3px, 3px);
   visibility: visible;
   margin: 0;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
 }
 
 header .navbar .toggle #toggle:checked ~ label > #bar2 {
