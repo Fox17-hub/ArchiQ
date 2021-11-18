@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/*
+Index:
+1/ All - line 14
+2/ header - line 196
+3/ body - line 219
+4/ section (all) - line 276
+5/ sections - line 387/510/...
+*/
 * {
   margin: 0;
   padding: 0;
@@ -20,108 +28,15 @@
 }
 
 *::-webkit-scrollbar-track {
-  background-color: #0e0768f5;
+  background-color: #0d0768;
   border-radius: 10px;
-}
-
-body {
-  background-color: white;
-}
-
-body #blurred-hr {
-  position: absolute;
-  z-index: 2;
-  height: 40px;
-  width: 100%;
-  background-color: black;
-  margin: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-shadow: 0px 15px 60px 80px black;
-          box-shadow: 0px 15px 60px 80px black;
-  position: relative;
-  border: none;
-}
-
-body hr {
-  height: 5px;
-  background-color: #f18f01;
-  border: none;
-}
-
-.banner {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: #202020;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.banner img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0.25;
-  -webkit-clip-path: [];
-          clip-path: [];
-}
-
-.banner .content {
-  position: relative;
-  max-width: 750px;
-  text-align: center;
-}
-
-.banner .content h2 {
-  color: white;
-  font-size: 60px;
-}
-
-.banner .content p {
-  color: white;
-  font-size: 18px;
-}
-
-.banner .content .fa {
-  font-size: 42px;
-  line-height: 40px;
-  color: white;
-  position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  top: 250px;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.banner .content .fa .fa-angle-double-down {
-  text-align: center;
-  vertical-align: baseline;
-}
-
-.banner .content .fa:hover {
-  color: #f18f01;
 }
 
 header {
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 10;
+  top: 0;
 }
 
 header .navbar {
@@ -319,8 +234,104 @@ header .navbar .toggle input {
   display: none;
 }
 
-section {
+body {
+  background-color: white;
+}
+
+body #blurred-hr {
+  position: absolute;
+  z-index: 3;
+  height: 40px;
+  width: 100%;
+  background-color: black;
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 15px 60px 80px black;
+          box-shadow: 0px 15px 60px 80px black;
+  position: relative;
+  border: none;
+}
+
+body hr {
+  height: 5px;
+  background-color: #f18f01;
+  border: none;
+}
+
+.banner {
+  position: fixed;
   z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #202020;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.25;
+  -webkit-clip-path: [];
+          clip-path: [];
+}
+
+.banner .content {
+  position: relative;
+  max-width: 750px;
+  text-align: center;
+}
+
+.banner .content h2 {
+  color: white;
+  font-size: 60px;
+}
+
+.banner .content p {
+  color: white;
+  font-size: 18px;
+}
+
+.banner .content .fa {
+  font-size: 42px;
+  line-height: 40px;
+  color: white;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 250px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.banner .content .fa .fa-angle-double-down {
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.banner .content .fa:hover {
+  color: #f18f01;
+}
+
+section {
+  z-index: 2;
 }
 
 section .heading {
@@ -377,6 +388,7 @@ section h1 {
 
 section h2 {
   font-size: 4vw;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,6 +399,7 @@ section h2 {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  padding: 5rem;
   /*
         //souligné + border rond
         &::after{
@@ -408,45 +421,34 @@ section .textBx {
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
-  width: 100%;
-}
-
-section .textBx p {
-  padding: 10vw;
-  padding-left: 25vh;
-  padding-right: 25vh;
-  padding-top: 25vw;
 }
 
 section .textBx #text1 {
+  padding-left: 25vh;
+  padding-right: 25vh;
+  padding-top: 25vw;
+  padding-bottom: 5vw !important;
   width: 100%;
   font-size: 22px;
   text-align: center;
-  background: #0e0768f5;
-  padding-bottom: 5vw !important;
+  background: #202020;
   position: relative;
 }
 
 section .textBx #text2 {
+  padding: 10rem !important;
   position: relative;
   width: 50%;
   left: 50%;
   font-size: 20px;
   text-align: justify;
-  background-color: #0e0768f5;
-  padding: 10rem !important;
-}
-
-section .textBx #text3 {
-  position: relative;
-  width: 50%;
-  font-size: 20px;
-  text-align: justify;
+  background-color: #0d0768;
 }
 
 .about {
   position: relative;
   width: 100%;
+  margin-top: 100vh;
 }
 
 .about .splide__slide {
@@ -597,33 +599,108 @@ section .textBx #text3 {
 }
 
 .innovations {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: linear-gradient(15deg, #0e0768f5 20%, #f18f01 90%);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(15deg, #0d0768 20%, #f18f01 90%);
 }
 
-.innovations #circle {
+.innovations .contentBx {
+  width: 100%;
+  padding: 10rem;
+}
+
+.innovations .contentBx #text3 {
+  padding-top: 12vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.innovations .contentBx .pia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 5vw;
+}
+
+.innovations .contentBx .pia #piaCircle {
+  padding-left: 10rem;
   z-index: 1;
-  left: 20%;
-  margin-top: -20%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: relative;
   -o-object-fit: cover;
      object-fit: cover;
   background: white;
-  width: 700px;
-  height: 700px;
+  width: 600px;
+  height: 600px;
   background-color: transparent;
   border-radius: 50%;
-  border: 1px solid white;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
-          box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
+  border: 10px solid white;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);
+}
+
+.innovations .contentBx .pia #textPia {
+  position: relative;
+  font-size: 20px;
+  text-align: justify;
+  width: 50%;
+  color: white;
+}
+
+.innovations .contentBx .eva {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 5vw;
+}
+
+.innovations .contentBx .eva #evaCircle {
+  z-index: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: white;
+  width: 600px;
+  height: 600px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 10px solid white;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);
+}
+
+.innovations .contentBx .eva #textEva {
+  position: relative;
+  font-size: 20px;
+  text-align: justify;
+  width: 50%;
+  left: 0%;
 }
 /*# sourceMappingURL=styles.css.map */
