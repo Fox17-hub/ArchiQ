@@ -66,7 +66,7 @@ header .navbar:hover {
 header .navbar .logo {
   color: white;
   text-decoration: none;
-  font-size: 2vw;
+  font-size: 4vh;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
@@ -628,6 +628,18 @@ section .textBx #text2 {
   text-align: justify;
 }
 
+.innovations .contentBx #title {
+  padding: 0;
+}
+
+.innovations .contentBx #sub-title {
+  position: relative;
+  font-size: 32px;
+  top: 0%;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0;
+}
+
 .innovations .contentBx .pia {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -635,11 +647,10 @@ section .textBx #text2 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding-top: 5vw;
+  padding-top: 10rem;
 }
 
 .innovations .contentBx .pia #piaCircle {
-  padding-left: 10rem;
   z-index: 1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -656,8 +667,33 @@ section .textBx #text2 {
   background-color: transparent;
   border-radius: 50%;
   border: 10px solid white;
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);
-          box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.innovations .contentBx .pia #piaCircle img {
+  background-size: cover;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+.innovations .contentBx .pia #piaCircle:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.9);
+          box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .innovations .contentBx .pia #textPia {
@@ -689,11 +725,35 @@ section .textBx #text2 {
   background: white;
   width: 600px;
   height: 600px;
-  background-color: transparent;
   border-radius: 50%;
   border: 10px solid white;
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);
-          box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.innovations .contentBx .eva #evaCircle img {
+  background-size: cover;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+.innovations .contentBx .eva #evaCircle:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.9);
+          box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .innovations .contentBx .eva #textEva {
