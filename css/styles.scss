@@ -29,8 +29,7 @@ Index:
     }
   
     &::-webkit-scrollbar-track {
-        background-color: $coolIndigo;
-        border-radius: 10px;
+        background-color: #14113d;
     }
 }
 
@@ -47,17 +46,18 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        transition: all 0.4s ease-in-out;
+        transition: all 0.3s ease-in-out;
         
         &:hover{
             background-color: rgba(0,0,0,0.7);
             box-shadow: inset 0px -10px 10px -10px rgba(255,255,255,0.7);
+            backdrop-filter: blur(0.2rem);
         }
 
         .logo{
             color: white;
             text-decoration: none;
-            font-size: 4vh;
+            font-size: 2.5rem;
             text-transform: uppercase;
             font-weight: 500;
             letter-spacing: 1px;
@@ -216,28 +216,34 @@ body{
 
 .banner{
     position: fixed;
-    z-index: 1;
+    z-index: -10;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: #202020;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    img{
+    .imgBg{
         position: absolute;
+        z-index: 1;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         object-fit: cover;
-        opacity: 0.25;
-        clip-path: [];
+        opacity: 0.5;
+        background: url("../img/headerSky.jpg") no-repeat;
+        background-size: 100%;
     }
+    
     .content{
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        top: 30%;
+        align-items: center;
         position: relative;
-        max-width: 750px;
+        width: 100%;
         text-align: center;
         
         h2{
@@ -251,11 +257,10 @@ body{
         
         .fa{ 
             font-size: 42px;
-            line-height: 40px;
             color:white;
             position: relative;
             justify-content: center;
-            top: 250px;
+            top: 20rem;
             cursor: pointer;           
             transition: all 0.2s ease;
 
@@ -274,26 +279,57 @@ body{
 section{  
     z-index: 2;
 
-    .heading{
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        height: 150px;
-        left: -20%;
-        display: inline-block;
-        margin-top: 10vw;
-        padding-bottom: 1vw;
-        border-radius: 50px;
-        letter-spacing: 1px;
+    .contentBx{
+
+        .heading{
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 150px;
+            left: -24%;
+            display: inline-block;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+            border-radius: 50px;
+            letter-spacing: 1px;
+        
+            #line{
+                width: 55%;
+                height: 4%;
+                position: absolute;
+                background-color: white;
+                left: 11%;
+                box-shadow: 0px 0px 15px 1px rgba(255,255,255,0.8);
+                border-radius: 10px;
+            }
+        }
+
+        .textBx{
+            justify-content: center;
+            color: white;
+            position: relative;
     
-        #line{
-            width: 53%;
-            height: 4%;
-            position: absolute;
-            background-color: white;
-            left: 11%;
-            box-shadow: 0px 0px 15px 1px rgba(255,255,255,0.8);
-            border-radius: 10px;
+            #text1{
+                padding-left: 25vh;
+                padding-right: 25vh;
+                padding-bottom: 3rem !important;
+                padding-top: 4rem;
+    
+                width: 100%;
+                font-size: 22px;
+                text-align: center;
+                position: relative;
+            }
+    
+            #text2{
+                padding: 10rem !important;
+                position: relative;
+                width: 50%;
+                left: 50%;
+                font-size: 20px;
+                text-align: justify;
+                background-color: $coolIndigo;
+            }
         }
     }
 
@@ -342,46 +378,27 @@ section{
         }
         */
     }
-
-    .textBx{
-        justify-content: center;
-        color: white;
-
-        #text1{
-            padding-left: 25vh;
-            padding-right: 25vh;
-            padding-top: 25vw;
-            padding-bottom: 5vw !important;
-
-            width: 100%;
-            font-size: 22px;
-            text-align: center;
-            background: #202020;
-            position: relative;
-        }
-
-        #text2{
-            padding: 10rem !important;
-
-            position: relative;
-            width: 50%;
-            left: 50%;
-            font-size: 20px;
-            text-align: justify;
-            background-color: $coolIndigo;
-        }
-    }
 }
 
 .about{
     position: relative;
     width: 100%;
+    height: 100%;
     margin-top: 100vh;
+
+    #firstBx{
+        box-shadow: 0px -10px 15px 0px rgba(255,255,255, 0.3);
+        background:rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
 
     .splide__slide{
         display: flex;
         justify-content: center;
-        background: #ECF0F1 ;
+        background: #ECF0F1;
         width: 50% !important;
         background-color: black;
     }
@@ -506,10 +523,11 @@ section{
     
     .contentBx{
         width: 100%;
-        padding: 10rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
 
         #text3{
-            padding-top: 12vw;
+            padding-top: 2vw;
             justify-content: center;
             position: relative;
             width: 100%;
@@ -531,8 +549,8 @@ section{
 
         .pia{
             display: flex;
-            justify-content: space-evenly;
-            padding-top: 10rem;
+            justify-content: space-around;
+            padding-top: 5rem;
 
             #piaCircle{
                 z-index: 1;
@@ -541,8 +559,8 @@ section{
                 position: relative;
                 object-fit: cover;
                 background: white;
-                width: 600px;
-                height: 600px;
+                width: 500px;
+                height: 500px;
                 background-color: transparent;
                 border-radius: 50%;
                 border: 10px solid white;
@@ -576,7 +594,8 @@ section{
         
         .eva{
             display: flex;
-            padding-top: 5vw;
+            justify-content: space-around;
+            padding-top: 2rem;
 
             #evaCircle{
                 z-index: 1;
@@ -585,8 +604,8 @@ section{
                 position: relative;
                 object-fit: cover;
                 background: white;
-                width: 600px;
-                height: 600px;
+                width: 500px;
+                height: 500px;
                 border-radius: 50%;
                 border: 10px solid white;
                 box-shadow: 0px 0px 10px 5px rgba(255,255,255, 0.5);

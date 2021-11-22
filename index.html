@@ -43,7 +43,8 @@
         </header>
         
     <div class="banner">
-        <img src="./img/headerSky.jpg" alt="image">
+        <div class="imgBg">
+        </div>
         <div class="content">
             <h2>Intelligence at it's finest</h2>
             <p>Lorem Ipsum</p>
@@ -53,25 +54,27 @@
 
     <section class="about">
         
-        <hr id="blurred-hr">
-        
-        <div class="contentBx"></div>
-        <div class="heading">
-            <h1 id="missions">Nos missions</h1>
-            <div id="line"></div>
-        </div>
+        <div class="contentBx" id="firstBx">
+            <div class="heading">
+                <h1 id="missions">Nos missions</h1>
+                <div id="line"></div>
+            </div>
             <div class="textBx">
                     <p id="text1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum atque aspernatur unde, commodi ullam voluptate corporis tempora vel, ducimus excepturi itaque illum velit quidem exercitationem ea dolores distinctio consequatur enim?</p>
             </div>
             
-            <hr>
+        </div>
+
+        <hr>
+            
+        <div class="contentBx">
             <div class="splide">
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
                             <div class="splide__slide__container">
                                 <img class="imgBox" src="./img/Singapore-Aerial-view-Cool-Tech.jpg">
-                                
+                            
                                 <div class="slides-title">
                                     <h2 id="nPage">1/6</h2>
                                     <h2 class="slides-hidden-title">Smartcity project</h2>
@@ -86,7 +89,7 @@
                         <li class="splide__slide">
                             <div class="splide__slide__container">
                                 <img class="imgBox" src="./img/Open-Source_3D_printed_Poppy_humanoid_robot_(head).jpg">
-                                <div class="slides-title">
+                                    <div class="slides-title">
                                     <h2 id="nPage">2/6</h2>
                                     <h2 class="slides-hidden-title">Robotics</h2>
                                     <br>
@@ -156,30 +159,29 @@
                     </ul>
                 </div>
             </div>
-            <hr>
+        </div>
+        <hr>
 
-            <div class="textBx">
-                <p id="text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem obcaecati accusantium, modi neque vero dolore ea quas praesentium. Possimus totam eius aspernatur delectus voluptatibus dicta molestiae vero, quisquam ex id.</p>
-            </div>
-            <div class="imgBox">
-
-            </div>
+        <div class="contentBx">
+        
+                <div class="textBx">
+                    <p id="text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem obcaecati accusantium, modi neque vero dolore ea quas praesentium. Possimus totam eius aspernatur delectus voluptatibus dicta molestiae vero, quisquam ex id.</p>
+                </div>
+                <div class="imgBox"></div>
         </div>
     </section>
     
-    <hr id="blurred-hr">
-
     <section class="innovations">
-        <div class="heading">
-            <h1 id="innovations">Nos services</h1>
-            <div id="line"></div>
-        </div>
-        <br>
-
+    
         <div class="contentBx">
+            <div class="heading">
+                <h1 id="innovations">Nos services</h1>
+                <div id="line"></div>
+            </div>
             <div class="textBx">
                 <p id="text3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum atque aspernatur unde, commodi ullam voluptate corporis tempora vel, ducimus excepturi itaque illum velit quidem exercitationem ea dolores distinctio consequatur enim?</p>
             </div>
+
             <div class="pia">
                 
                 <div id="piaCircle">
@@ -191,14 +193,12 @@
                     <p></p>
                 </div>
             </div>
-
+            <hr style="margin: 5vw; height: 2px; background-color:white;">    
             <div class="eva">
                 <div id="textEva">
-                    <div class="textBx">
                         <h1 id="title">EVA</h1>
                         <h2 id="sub-title">Evolutive Virtual Assistant</h2>
                         <p></p>
-                    </div>
                 </div>
                 <div id="evaCircle">
                     <img src="./img/brain chip.svg" alt="eva picture">
@@ -206,7 +206,7 @@
             </div>
         </div>
 
-
+        
         <section class="chiffres">
             <h2>En chiffre</h2>
             <div class="grid">
@@ -215,7 +215,7 @@
         </section>
         
         <section>
-            <h2>Nos Valeurs</h2>
+            <h1>Nos Valeurs</h1>
         </section>
     </section>
 
