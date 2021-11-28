@@ -461,8 +461,8 @@ section h2 {
   width: 50% !important;
   background-color: black;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
 }
 
 .about .splide__slide:hover, .about .splide__slide:focus {
@@ -470,8 +470,9 @@ section h2 {
           box-shadow: inset 7px 0px 10px 0px black, inset -5px 0px 10px 0px black;
 }
 
-.about .splide__slide:hover .slides-text, .about .splide__slide:focus .slides-text {
+.about .splide__slide:hover .slides-text {
   opacity: 1;
+  visibility: visible;
 }
 
 .about .splide__slide:hover .imgBox, .about .splide__slide:focus .imgBox {
@@ -484,6 +485,13 @@ section h2 {
 
 .about .target {
   width: 80% !important;
+}
+
+.about .target:focus .hiddenBx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
 }
 
 .about .imgBox {
@@ -511,8 +519,8 @@ section h2 {
   display: flex;
   background: #202020;
   position: relative;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .about .splide__slide__container .contentBx {
@@ -533,8 +541,6 @@ section h2 {
   text-align: justify;
   padding: 2rem;
   background: rgba(0, 0, 0, 0.7);
-  -webkit-transition: all 0.5;
-  transition: all 0.5;
 }
 
 .about .splide__slide__container .slides-title {
@@ -601,6 +607,7 @@ section h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  visibility: hidden;
 }
 
 .about .splide__slide__container .slides-hidden-title {

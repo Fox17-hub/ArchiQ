@@ -387,14 +387,15 @@ section{
         background-color: black;
         cursor: pointer;
         
-        transition: all 0.3s ease-in-out;
+        transition: all 3s ease-in-out;
         
         &:hover, &:focus { 
             box-shadow: inset 7px 0px 10px 0px black, inset -5px 0px 10px 0px black;
         }
 
-        &:hover .slides-text, &:focus .slides-text{
+        &:hover .slides-text{
             opacity: 1;
+            visibility: visible;
         }
 
         &:hover .imgBox, &:focus .imgBox{
@@ -408,6 +409,11 @@ section{
     
     .target{
         width: 80% !important;
+        
+        &:focus .hiddenBx { 
+            display: flex;
+            opacity: 1;
+        }
     }
 
     .imgBox{
@@ -430,7 +436,7 @@ section{
         display: flex;
         background: #202020;
         position: relative;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.5s ease-in-out;
 
         .contentBx{
             width: 858.5px;
@@ -446,7 +452,6 @@ section{
             text-align: justify;
             padding: 2rem;
             background: rgba(0,0,0,0.7);
-            transition: all 0.5;
         }
 
         .slides-title{
@@ -500,6 +505,7 @@ section{
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             display: flex;
+            visibility: hidden;
         }
     
         .slides-hidden-title{
