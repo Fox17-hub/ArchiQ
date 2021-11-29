@@ -107,13 +107,22 @@ for (let i = 0; i < navUl.length; i++) {
 
 
 function expand(event) {
+  let hiddenBx = event.currentTarget.querySelector('div.splide__slide__container > .hiddenBx');
+  let slideTxt = event.currentTarget.querySelector('div.splide__slide__container > .contentBx > .slides-text');
+
   if (event.currentTarget.classList.contains('target')){
+    slideTxt.style.visibility = 'visible';
+    hiddenBx.style.transition = 'all 0.5s ease-in-out';
+    hiddenBx.style.opacity = '0';
     event.currentTarget.classList.remove('target');
   }
+
   else {
+    slideTxt.style.visibility = 'hidden';
+    hiddenBx.style.transition = 'all 2s ease-in-out';
+    hiddenBx.style.opacity = '1';
     event.currentTarget.classList.add('target');
   }
-  console.log(event.currentTarget.classList)
 }
 
 /*

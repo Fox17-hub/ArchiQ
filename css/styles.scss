@@ -387,32 +387,26 @@ section{
         background-color: black;
         cursor: pointer;
         
-        transition: all 3s ease-in-out;
+        transition: all 2s ease-in-out;
         
-        &:hover, &:focus { 
+        &:hover { 
             box-shadow: inset 7px 0px 10px 0px black, inset -5px 0px 10px 0px black;
-        }
-
-        &:hover .slides-text{
-            opacity: 1;
-            visibility: visible;
         }
 
         &:hover .imgBox, &:focus .imgBox{
             opacity: 0.25;
         }
         
-        &:hover .slides-title, &:focus .slides-title{
+        &:hover .contentBx, &:focus .contentBx{
             opacity: 1;
         }
     }
     
     .target{
         width: 80% !important;
-        
-        &:focus .hiddenBx { 
-            display: flex;
-            opacity: 1;
+
+        .slides-text{
+            opacity: 0 !important;
         }
     }
 
@@ -436,55 +430,104 @@ section{
         display: flex;
         background: #202020;
         position: relative;
-        transition: all 0.5s ease-in-out;
 
         .contentBx{
-            width: 858.5px;
+            width: 50%;
             display: flex;
             position: relative;
+            transition: all .5s ease-in-out;
+            opacity: 0;
+
+            .slides-title{
+                z-index: 10;
+                background-color: rgba(255,255,255,0.25);
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                display: block;
+                width: 220px;
+                height: 100%;
+                top: 50%;
+                left: 75px;
+                padding: 5%;
+                white-space: nowrap;
+                
+                transition: all 2s ease-in-out;
+    
+                .slides-hidden-title{
+                    position: absolute;
+                    font-size: 1vw;
+                    top: 30%;
+                    left: 40%;
+                    font-size: 3.5rem;
+                    padding: 0;
+                }
+                
+                .sub-title{
+                    z-index: 2;
+                    position: absolute;
+                    left: 70%; 
+                    font-size: 2.5rem !important; 
+                    top: 40%;
+                    color: rgba(255,255,255, 0.7);
+                    transition: all 2s ease-in-out;
+                    
+                    .orange{
+                        color: $coolOrange;
+                    }
+                }
+
+                #pain {
+                    transition: all 2s ease-in-out;
+                    &:hover #wPlay{
+                        display: none;
+                    }
+
+                    &:hover:before{
+                        content: 'Pain, ';
+                    }
+                }
+            }
+
+            .slides-text{
+                position: absolute;
+                opacity: 1;
+                top: 80%;
+                left: 500px;
+                width: 550px;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                display: flex;
+                transition: all 0.5s ease-in-out;
+                
+                .orange{
+                    color: $coolOrange;
+                }
+            }
         }
         
         .hiddenBx{
-            display: none;
+            display: flex;
             opacity: 0;
-            width: 50%;
+            transition: all 2s ease-in-out;
+            width: 40%;
+            position: relative;
+            left: 5%;
             align-items: center;
             text-align: justify;
-            padding: 2rem;
+            padding: 5rem;
             background: rgba(0,0,0,0.7);
-        }
+            overflow: hidden;
 
-        .slides-title{
-            z-index: 2;
-            background-color: rgba(255,255,255,0.25);
-            position: absolute;
-            transition: .5s ease;
-            opacity: 0;
-            justify-content: center;
-            align-items: center;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            display: block;
-            width: 30%;
-            height: 100%;
-            top: 50%;
-            left: 10%;
-            padding: 5%;
-            white-space: nowrap;
-        }
-        
-        .sub-title{
-            z-index: 2;
-            position: relative;
-            left: 60%; 
-            font-size: 2.5rem !important; 
-            top: 35%;
-            color: rgba(255,255,255, 0.7);
             .orange{
                 color: $coolOrange;
             }
         }
-    
+
+        
+        
         #nPage{
             font-size: 2rem;
             height: 20%;
@@ -495,37 +538,10 @@ section{
             left: 81%;
         }
     
-        .slides-text{
-            position: absolute;
-            transition: .5s ease;
-            opacity: 0;
-            top: 80%;
-            left: 60%;
-            width: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            display: flex;
-            visibility: hidden;
-        }
-    
-        .slides-hidden-title{
-            position: absolute;
-            justify-content: center;
-            align-items: flex-start;
-            font-size: 1vw;
-            width: 100%;
-            top: 30%;
-            left: 60%;
-            text-align: center;
-            font-size: 3rem;
-            padding: 0;
-        }
-    
         .slides-hidden-text{
             color: white;
-            align-items: flex-end;
             text-align:justify;
-            justify-content: flex-end;
+            width: 650px;
         }
     }
 
