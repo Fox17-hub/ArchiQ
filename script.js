@@ -60,46 +60,8 @@ function toggle() {
     console.log('show');
   }
 }
-/*
-function expand(){
-  let active = document.querySelector('.splide__slide');
-  let target = document.getElementById('target');
 
-  if (active.classList.contains(target)) {
-    active.classList.remove(target);
-  } 
-  else {
-    active.classList.add(target);
-  }
-  console.log(document.getElementById('target'))
-}*/
-
-/*
-let target = document.querySelector('.target');
-let element = document.querySelector('.splide__slide').addEventListener('click', i => {
-
-  if (element.classList.contains('target')) {
-    element.classList.remove('target');
-  } 
-  else {
-    element.classList.add('target');
-  }
-  console.log(element.classList);
-});*/
-
-/*
-function expand(){
-  let element = document.getElementsByClassName('splide__slide')[6];
-
-  if (element.style.width === '80%') {
-    element.style.width = '50%';
-  } 
-  else {
-    element.style.width = '80%';
-  }
-  console.log(element);
-}*/
-
+//grab array of cards (li) > pick the right one > expand(add class ".target" and modify ".contentBx" properties)
 let navUl = [].slice.call(document.querySelectorAll('.splide__list > li'));
 for (let i = 0; i < navUl.length; i++) {
   navUl[i].addEventListener('click', expand);
@@ -124,54 +86,3 @@ function expand(event) {
     event.currentTarget.classList.add('target');
   }
 }
-
-/*
-function callBx(event) {
-  let box = [].slice.call(document.querySelectorAll(".splide__slide > div > div.hiddenBx"));
-  
-  const e = new Event('expanded');
-  for (let j = 0; j < box.length; j++) {
-    box[j].addEventListener('expanded', showBx);
-    box[j].dispatchEvent(e);
-  }
-  
-  function showBx(e){
-    if (e.currentTarget.style.display === 'flex' && e.currentTarget.style.opacity === '1'){
-      e.currentTarget.style.opacity = '0';
-      
-      e.currentTarget.style.display = 'none';  
-      window.setTimeout(function() {
-        e.currentTarget.style.display = 'none';  
-      },350);
-    }
-    else {
-      e.currentTarget.style.display = 'flex';
-      e.currentTarget.style.opacity = '1';
-      window.setTimeout(function() {
-        e.currentTarget.style.opacity = '1';
-      }, 100);
-    }
-  }
-}*/
-
-/*
-function showBx(event) {
-  let box = [].slice.call(document.querySelectorAll(".splide__slide > div > div.hiddenBx"));
-  
-  for (let j = 0; j < box.length; j++) {  
-    if (box[j].style.display === 'flex' && box[j].style.opacity === '1'){
-      box[j].style.opacity = '0';
-      window.setTimeout(function() {
-        box[j].style.display = 'none';  
-      },350);
-    }
-    else {
-      box[j].style.display = 'flex';
-      window.setTimeout(function() {
-        box[j].style.opacity = '1';
-      }, 100);
-    }
-  }
-}*/
-
-// piste :  let box = document.querySelector(".splide__slide > div > div.hiddenBx").classList.contains('target');

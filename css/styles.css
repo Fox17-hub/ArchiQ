@@ -610,9 +610,9 @@ section h2 {
   display: -ms-flexbox;
   display: flex;
   opacity: 0;
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
-  width: 40%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  width: 549.438px;
   position: relative;
   left: 5%;
   -webkit-box-align: center;
@@ -643,7 +643,7 @@ section h2 {
 .about .splide__slide__container .slides-hidden-text {
   color: white;
   text-align: justify;
-  width: 650px;
+  white-space: break-spaces;
 }
 
 .about #secondBx {
@@ -859,5 +859,51 @@ section h2 {
   text-align: justify;
   width: 50%;
   left: 0%;
+}
+
+.partenaire__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2em 5em;
+  background-color: rgba(20, 20, 20, 0.8);
+}
+
+.partenaire__container .partenaire__title {
+  font-size: 44px;
+  color: white;
+}
+
+.partenaire__logos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 4em;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.partenaire__logos .logo__item {
+  margin: 0;
+  padding: 0;
+  max-width: 250px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.partenaire__logos .logo__item--white {
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 /*# sourceMappingURL=styles.css.map */
