@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css copy/styles.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <!-- -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js">
+    </script>
+    <!-- -->
+    <title>Arch-iQ</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="nav__bar">
+            <a href="#" class="nav__logo">Arch-iQ</a>
+            <div class="navBx">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a class="nav__links" href="#about">About</a></li>
+                        <li><a class="nav__links" href="#innovations">Innovations</a></li>
+                        <li><a class="nav__links" href="#">Group</a></li>
+                        <li><a class="nav__links" href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="nav-btn" onclick="toggle()">
+                <div class="nav-btn__toggle">
+                    <input class="nav-btn__input" type="checkbox" id="toggle">
+                    <label class="nav-btn__label">
+                        <a class="nav-btn__bars" id="bar1" for="toggle"></a>
+                        <a class="nav-btn__bars" id="bar2" for="toggle"></a>
+                        <a class="nav-btn__bars" id="bar3" for="toggle"></a></label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner__img">
+        </div>
+        <div class="banner__contentBx">
+            <h2 class="banner__title">Intelligence at it's finest</h2>
+            <p class="banner__subtitle">Lorem Ipsum</p>
+            <a class="banner__icn" href="#about"><i class="fa fa-angle-double-down"></i></a>
+        </div>
+    </div>
+
+    <section class="section about">
+
+        <div class="section__intro">
+            <div class="section__heading">
+                <h2 class="section__title" id="about">About</h2>
+                <div class="line"></div>
+            </div>
+            <div class="section__textBx">
+                <p class="section__text about__firstBx">For the last two decades, Arch-IQ has worked in hand with the brightest minds and the most
+                    talented workers around the globe and beyond. Our story is theirs.</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+                                <div class="slide__contentBx">
+                                    <div class="slide__header">
+                                        <h2 class="slide__nPage">1/6</h2>
+                                        <h2 class="slide__title">Smartcity Project</h2>
+                                        <br>
+                                        <p class="slide__sub-title">Tomorrow, <span class="slide__sub-title--orange">Today.</span></p>
+                                    </div>
+                                    <div class="slide__textBx">
+                                        <p class="slide__desc">After many years of research on the CTOS project,
+                                            and a huge lobbying campain on local authorities around the globe, we
+                                            decided to bring cities to life with our very first sustainable OS, <span
+                                                class="slide__desc--orange"><strong class="slide__desc--strong">ArchOS</strong></span>.</p>
+                                    </div>
+                                </div>
+                                <img class="slide__img" src="./img/Singapore-Aerial-view-Cool-Tech.jpg">
+                                <div class="slide__hiddenBx">
+                                    <p class="slide__text">Great news ! Because we noticed you track down WiFi
+                                        hotspots like detectives stalks unfaithful wives, we're allowing you to heavily
+                                        rely on us <span class="slide__text--orange"><strong class="slide__text--strong">forever</strong></span> and for free, as
+                                        we now monitor every aspect of your social life !</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+                                <div class="contentBx">
+                                    <div class="slides-title">
+                                        <h2 id="nPage">2/6</h2>
+                                        <h2 class="slides-hidden-title">Robotics</h2>
+                                        <br>
+                                        <p class="sub-title">What could go <span class="orange">wrong?</span></p>
+                                    </div>
+                                    <div class="slides-text">
+                                        <p class="slides-hidden-text">Ever dreamt of a companion that would love you
+                                            forever, support you against wind and tides, no matter what? <br> Well, that
+                                            would be great but that's not what's going to happen.</p>
+                                    </div>
+                                </div>
+                                <img class="imgBox" src="./img/Open-Source_3D_printed_Poppy_humanoid_robot_(head).jpg">
+                                <div class="hiddenBx">
+                                    <p class="slides-hidden-text">If it has <span class="orange">real feelings</span>,
+                                        it'll start judging you and it won't bear you treating it like garbage for long.
+                                        But as a GPT-3 AI once said <q>01000010 01100101 00100000 01110000 01100001
+                                            01110100 01101001 01100101 01101110 01110100 00101100 00100000 01100010
+                                            01100101 00100000 01110001 01110101 01101001 01100101 01110100 00101110</q>,
+                                        and because we learned nothing from science-fiction getting too real, we decided
+                                        for the whole humankind that leaving self-concious minds into not so
+                                        self-conscious apes like yourself would be a <span
+                                            class="orange"><strong>wonderful</strong></span> idea.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+                                <div class="contentBx">
+                                    <div class="slides-title">
+                                        <h2 id="nPage">3/6</h2>
+                                        <h2 class="slides-hidden-title">MedTech </h2>
+                                        <br>
+                                        <p class="sub-title" id='pain'><span id='wPlay'>Life, </span><span
+                                                class="orange">Forever.</span></p>
+                                    </div>
+                                    <div class="slides-text">
+                                        <p class="slides-hidden-text">Did you know that the global pharmaceutical market
+                                            reached 1250.24 billion in 2021? <br>We do ! And that's why taking care of
+                                            your health is our <span class="orange">dream</span> job !</p>
+                                    </div>
+                                </div>
+                                <img class="imgBox" src="./img/Medtech_Large_Icon.jpeg">
+                                <div class="hiddenBx">
+                                    <p class="slides-hidden-text"> "Basic health" is not good enough for you; you are
+                                        truely special, you deserves better. <br> In that regard, you can now subscribe
+                                        to our "Health Plus" plan ! Can't get a student loan or insure your property?
+                                        Maybe your Health score is too low. But thanks to our "Health Plus" plan, your
+                                        aunt's breast cancer is not taken into account anymore ! <br> And thanks to your
+                                        "fear of death", our services can now turn data into gold, achieving Lavoisier's
+                                        craziest <span class="orange">dream</span> !</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+
+                                <div class="contentBx">
+                                    <div class="slides-title">
+                                        <h2 id="nPage">4/6</h2>
+                                        <h2 class="slides-hidden-title">Aeronautics </h2>
+                                        <br>
+                                        <p class="sub-title">Bigger, <span class="orange">Everyday.</span></p>
+                                    </div>
+                                    <div class="slides-text">
+                                        <p class="slides-hidden-text"><q>Si vis pacem, para bellum</q>.<br>Fortunately,
+                                            we're the most experienced peace sellers. And thanks to 52% of the US
+                                            defense's budget, we now thrive on distrustful international relationship.
+                                            Sometime we make planes, sometime we wage war, but we make it <span
+                                                class="orange">big</span> everytime. </p>
+                                    </div>
+                                </div>
+                                <img class="imgBox" src="./img/150505-F-SI788-099.jpg">
+                                <div class="hiddenBx">
+                                    <p class="slides-hidden-text">The War era is over. We worked relentlessly on
+                                        efficient ways to take a maximum of lives in a minimum amount of time and
+                                        there's only preventive surgical airstrikes now. That's how good we are at our
+                                        craft.
+                                        <br> Also, as a wise man once said <q>If you're not with us, you're against
+                                            us</q>, which is true, so we made our drone squads deadlier than the H-bomb
+                                        and Twitter combined.
+                                        <br>Seriously, you should see this, this is getting nasty.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+
+                                <div class="contentBx">
+                                    <div class="slides-title">
+                                        <h2 id="nPage">5/6</h2>
+                                        <h2 class="slides-hidden-title">Space</h2>
+                                        <br>
+                                        <p class="sub-title">The Impossible <span class="orange">Dream.</span></p>
+                                    </div>
+                                    <div class="slides-text">
+                                        <p class="slides-hidden-text"><q>This is my quest, To follow that star, No
+                                                matter how hopeles, No matter how far</q>. And like Sinatra, we'll reach
+                                            the unreachable star: running away from problems.</p>
+                                    </div>
+                                </div>
+                                <img class="imgBox" src="./img/florida-kennedy-space-center-rocket-launch.jpg">
+                                <div class="hiddenBx">
+                                    <p class="slides-hidden-text">After we realised Earth had issues (and a toxic
+                                        personality), we thought it was time for mankind to take some time apart.. To
+                                        figure things out, you know. After all, there's plenty of rocks among the stars,
+                                        right? And we think it's time for us to find a place that really deserves us,
+                                        NOT A LUNATIC GEMINI THAT GETS MAD EVERYTIME WE DO SOMETHING WRONG, GAÏA! </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+
+                                <div class="contentBx">
+                                    <div class="slides-title">
+                                        <h2 id="nPage">6/6</h2>
+                                        <h2 class="slides-hidden-title">Data Management</h2>
+                                        <br>
+                                        <p class="sub-title">ezae<span class="orange">You pronounced it wrong.</span>
+                                        </p>
+                                    </div>
+                                    <div class="slides-text">
+                                        <p class="slides-hidden-text">No matter how you pronounce it, we need yours.</p>
+                                    </div>
+                                </div>
+                                <img class="imgBox" src="./img/b3c67e9e54bd3f0deeab60281277a569.png">
+                                <div class="hiddenBx">
+                                    <p class="slides-hidden-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Obcaecati cupiditate quia distinctio ad dolores, adipisci non eos! Culpa
+                                        repellendus hic eveniet aut ullam. Incidunt unde eos nulla minus aspernatur
+                                        voluptatum!</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        <hr>
+
+        <div class="section__contentBx about__secondBx">
+            <div class="textBx">
+                <p class="firstText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem obcaecati accusantium, modi
+                    neque vero dolore ea quas praesentium. Possimus totam eius aspernatur delectus voluptatibus dicta
+                    molestiae vero, quisquam ex id.</p>
+            </div>
+            <div class="textBx">
+                <p class="secondText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum consequatur iure
+                    quis debitis, praesentium ipsa exercitationem enim placeat, maxime sunt dignissimos ad vel, vero sit
+                    rerum sed laudantium nostrum!</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section innovations">
+
+        <div class="contentBx">
+            <div class="section__heading">
+                <h1 class="section__title" id="innovations">Our Products</h1>
+                <div class="line"></div>
+            </div>
+            <div class="section__textBx">
+                <p id="text3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum atque aspernatur
+                    unde, commodi ullam voluptate corporis tempora vel, ducimus excepturi itaque illum velit quidem
+                    exercitationem ea dolores distinctio consequatur enim?</p>
+            </div>
+
+            <div class="pia">
+
+                <div id="piaCircle">
+                    <img src="./img/brain chip.svg" alt="pia picture">
+                </div>
+                <div id="textPia">
+                    <h1 id="title">PIA</h1>
+                    <h2 id="sub-title">Your Personal AI</h2>
+                    <div class="textBx">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias at deleniti, debitis tenetur
+                            ratione praesentium aspernatur enim quibusdam consequuntur in, incidunt vel error
+                            accusantium quae beatae exercitationem, harum animi quam!</p>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin: 5vw; height: 2px; background-color:white;">
+            <div class="eva">
+                <div id="textEva">
+                    <h1 id="title">EVA</h1>
+                    <h2 id="sub-title">Evolutive Virtual Assistant</h2>
+                    <div class="textBx">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias at deleniti, debitis tenetur
+                            ratione praesentium aspernatur enim quibusdam consequuntur in, incidunt vel error
+                            accusantium quae beatae exercitationem, harum animi quam!</p>
+                    </div>
+                </div>
+                <div id="evaCircle">
+                    <img src="./img/brain chip.svg" alt="eva picture">
+                </div>
+            </div>
+        </div>
+
+
+        <section class="chiffres">
+            <h2>En chiffre</h2>
+            <div class="grid">
+
+            </div>
+        </section>
+
+        <section>
+            <h1>Nos Valeurs</h1>
+        </section>
+    </section>
+
+    <hr id="blurred-hr">
+
+    <section class="section group__container">
+        <h2 class="group__title">Groupe</h1>
+            <div class="group__photo">
+                <img src="./img/group/image (1).jpg" alt="">
+                <img src="./img/group/image (2).jpg" alt="">
+                <img src="./img/group/image (3).jpg" alt="">
+                <img src="./img/group/image.jpg" alt="">
+                <img src="./img/group/v3_0042092.jpg" alt="">
+                <img src="./img/group/v3_0056403.png" alt="">
+                <img src="./img/group/v3_0107952.png" alt="">
+                <img src="./img/group/v3_0239480.jpg" alt="">
+                <img src="./img/group/v3_0276538.png" alt="">
+                <img src="./img/group/v3_0280654.png" alt="">
+                <img src="./img/group/v3_0314170.jpg" alt="">
+                <img src="./img/group/v3_0341209.jpg" alt="">
+                <img src="./img/group/v3_0445219_0505822_0539529.png" alt="">
+                <img src="./img/group/v3_0478086.jpg" alt="">
+                <img src="./img/group/v3_0570023.png" alt="">
+                <img src="./img/group/v3_0651749.png" alt="">
+                <img src="./img/group/v3_0710477.png" alt="">
+                <img src="./img/group/v3_0749738.png" alt="">
+                <img src="./img/group/v3_0792764.png" alt="">
+                <img src="./img/group/v3_0815441.png" alt="">
+                <img src="./img/group/v3_0887205.png" alt="">
+                <img src="./img/group/v3_0921871.png" alt="">
+                <img src="./img/group/v3_0997192.png" alt="">
+            </div>
+            <div class="partenaire__container">
+                <h3 class="partenaire__title">Ils nous font confiance
+        </h2>
+        <div class="partenaire__logos">
+            <img class="logo__item" src="./img/partenaires/1280px-Amazon_logo.svg.png" alt="">
+            <img class="logo__item" src="./img/partenaires/13415486_1097419230327690_5774048483054557724_o.jpg" alt="">
+            <img class="logo__item" src="./img/partenaires/3230555-vt.jpg" alt="">
+            <img class="logo__item logo__item--white" src="./img/partenaires/486px-Sarif_Industries_Logo.svg.png"
+                alt="">
+            <img class="logo__item" src="./img/partenaires/515-5153025_abstergo-industries-hd-png-download.jpg" alt="">
+            <img class="logo__item logo__item--white" src="./img/partenaires/Aperture_Laboratories_Logo.svg.png" alt="">
+            <img class="logo__item" src="./img/partenaires/Blume_Logo.png" alt="">
+            <img class="logo__item" src="./img/partenaires/BnL.svg" alt="">
+            <img class="logo__item" src="./img/partenaires/d8i0rd2-ad825dc5-78ef-4713-9be4-c0be44ee7091.jpg" alt="">
+            <img class="logo__item" src="./img/partenaires/fa1983be614d35f930b919d03172d590.jpg" alt="">
+            <img class="logo__item" src="./img/partenaires/Logo_Vault-Tec.webp" alt="">
+            <img class="logo__item" src="./img/partenaires/share.jpg" alt="">
+            <img class="logo__item" src="./img/partenaires/Stark_Industries_Logo.png" alt="">
+            <img class="logo__item" src="./img/partenaires/Tesla-symbol.jpg" alt="">
+        </div>
+        </div>
+    </section>
+
+    <hr id="blurred-hr">
+
+    <div class="contact"></div>
+
+
+    <script src="script copy.js"></script>
+
+
+</body>
+
+</html>
