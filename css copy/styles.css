@@ -29,7 +29,7 @@
   background-color: white;
 }
 
-.body #blurred-hr {
+.body .blurred-hr {
   position: absolute;
   z-index: 3;
   height: 40px;
@@ -558,6 +558,7 @@
 
 .about .splide__slide__container .slide__contentBx .slide__header .slide__sub-title--orange {
   color: #f18f01;
+  font-weight: 500;
 }
 
 .about .splide__slide__container .slide__contentBx .slide__header #pain {
@@ -633,7 +634,6 @@
 .about .splide__slide__container .slide__desc--orange,
 .about .splide__slide__container .slide__text--orange {
   color: #f18f01;
-  font-weight: bold;
 }
 
 .about .splide__slide__container .slide__desc--strong,
@@ -652,6 +652,7 @@
   width: 50%;
   text-align: justify;
   font-size: 20px;
+  color: white;
 }
 
 .about__secondBx .textBx .firstText {
@@ -680,13 +681,13 @@
   background: linear-gradient(15deg, #0d0768 10%, #202020 65%);
 }
 
-.innovations .contentBx {
+.innovations__contentBx {
   width: 100%;
   padding-left: 10rem;
   padding-right: 10rem;
 }
 
-.innovations .contentBx #text3 {
+.innovations__contentBx .section__text {
   padding-top: 2vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -697,23 +698,25 @@
   text-align: justify;
 }
 
-.innovations .contentBx #title {
-  padding: 0;
-}
-
-.innovations .contentBx #sub-title {
-  position: relative;
-  font-size: 32px;
-  top: 0%;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 0;
-}
-
-.innovations .contentBx .textBx {
+.innovations__contentBx .pia__textBx, .innovations__contentBx .eva__textBx {
   padding: 2rem;
 }
 
-.innovations .contentBx .pia {
+.innovations__contentBx .pia__title, .innovations__contentBx .eva__title {
+  padding: 0;
+  text-align: center;
+}
+
+.innovations__contentBx .pia__sub-title, .innovations__contentBx .eva__subtitle {
+  position: relative;
+  top: 0%;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 32px;
+  text-align: center;
+}
+
+.innovations__contentBx .pia {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,7 +725,19 @@
   padding-top: 5rem;
 }
 
-.innovations .contentBx .pia #piaCircle {
+.innovations__contentBx .pia__textBx {
+  position: relative;
+  font-size: 20px;
+  text-align: justify;
+  width: 50%;
+  color: white;
+}
+
+.innovations__contentBx .pia__text {
+  margin: 2rem;
+}
+
+.innovations__contentBx .pia__circle {
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -750,7 +765,7 @@
   overflow: hidden;
 }
 
-.innovations .contentBx .pia #piaCircle img {
+.innovations__contentBx .pia__circle .pia__chip {
   background-size: cover;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -764,7 +779,7 @@
   transition: all 2s;
 }
 
-.innovations .contentBx .pia #piaCircle:hover {
+.innovations__contentBx .pia__circle:hover {
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
   -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.9);
@@ -772,20 +787,12 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.innovations .contentBx .pia #piaCircle:hover img {
+.innovations__contentBx .pia__circle:hover .pia__chip {
   -webkit-transform: translate(0%, 11%) scale(1.5, 1.5);
           transform: translate(0%, 11%) scale(1.5, 1.5);
 }
 
-.innovations .contentBx .pia #textPia {
-  position: relative;
-  font-size: 20px;
-  text-align: justify;
-  width: 50%;
-  color: white;
-}
-
-.innovations .contentBx .eva {
+.innovations__contentBx .eva {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -794,7 +801,7 @@
   padding-top: 2rem;
 }
 
-.innovations .contentBx .eva #evaCircle {
+.innovations__contentBx .eva #evaCircle {
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -821,7 +828,7 @@
   overflow: hidden;
 }
 
-.innovations .contentBx .eva #evaCircle img {
+.innovations__contentBx .eva #evaCircle img {
   background-size: cover;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -835,7 +842,7 @@
   transition: all 2s;
 }
 
-.innovations .contentBx .eva #evaCircle:hover {
+.innovations__contentBx .eva #evaCircle:hover {
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
   -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.9);
@@ -843,12 +850,12 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.innovations .contentBx .eva #evaCircle:hover img {
+.innovations__contentBx .eva #evaCircle:hover img {
   -webkit-transform: translate(0%, 11%) scale(1.5, 1.5);
           transform: translate(0%, 11%) scale(1.5, 1.5);
 }
 
-.innovations .contentBx .eva #textEva {
+.innovations__contentBx .eva #textEva {
   position: relative;
   font-size: 20px;
   text-align: justify;
