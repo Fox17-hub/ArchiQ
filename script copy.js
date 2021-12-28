@@ -10,6 +10,21 @@ document.addEventListener( 'DOMContentLoaded', function() {
   splide.mount();
 } );
 
+//splide logo
+document.addEventListener( 'DOMContentLoaded', function() {
+  var splide = new Splide( '.splide__logos', {
+    type   : 'loop',
+    padding: '5rem',
+    autoplay: true,
+    rewind: true,
+    perPage: 4,
+    perMove: 4,
+    rewindSpeed: '100',
+    padding: '1rem',
+    pauseOnHover: true,
+  } );
+  splide.mount();
+} );
 /* SOLUTION 1: CLASS HIDDEN
 HTML
 class="hidden"
