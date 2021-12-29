@@ -10,36 +10,22 @@ document.addEventListener( 'DOMContentLoaded', function() {
   splide.mount();
 } );
 
-/* SOLUTION 1: CLASS HIDDEN
-HTML
-class="hidden"
+//splide logo
+document.addEventListener( 'DOMContentLoaded', function() {
+  var splide = new Splide( '.splide__logos', {
+    type   : 'loop',
+    padding: '5rem',
+    autoplay: true,
+    rewind: true,
+    perPage: 4,
+    perMove: 4,
+    rewindSpeed: '100',
+    padding: '1rem',
+    pauseOnHover: true,
+  } );
+  splide.mount();
+} );
 
-CSS
-.hidden { 
-  display:none;
-}
-        
-
-var nav = document.querySelector('nav');
-var transf = document.getElementById('toggle');
-var icon = document.querySelector('.iconBtn').addEventListener('click', i => {
-
-  if (nav.classList.contains('hidden')) {
-    nav.classList.remove('hidden');
-    transf.checked = true;
-    console.log('opps');
-  } 
-  else {
-    nav.classList.add('hidden');
-    transf.checked = false;
-    console.log('shit');
-  }
-  console.log(nav.classList);
-  console.log(transf.checked);
-});*/
-
-
-// SOLUTION 2: x.style.opacity
 
 function toggle() {
   var nav = document.querySelector('nav');
@@ -69,8 +55,8 @@ for (let i = 0; i < navUl.length; i++) {
 
 
 function expand(event) {
-  let hiddenBx = event.currentTarget.querySelector('div.splide__slide__container > .hiddenBx');
-  let slideTxt = event.currentTarget.querySelector('div.splide__slide__container > .contentBx > .slides-text');
+  let hiddenBx = event.currentTarget.querySelector('div.splide__slide__container > .slide__hiddenBx');
+  let slideTxt = event.currentTarget.querySelector('div.splide__slide__container > .slide__contentBx > .slide__textBx');
 
   if (event.currentTarget.classList.contains('target')){
     slideTxt.style.visibility = 'visible';
