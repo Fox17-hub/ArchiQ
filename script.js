@@ -26,8 +26,10 @@ document.addEventListener( 'DOMContentLoaded', function() {
   splide.mount();
 } );
 
+const toggle = document.getElementById('nav-btn');
+toggle.addEventListener('click', toggleNav);
 
-function toggle() {
+function toggleNav() {
   var nav = document.querySelector('nav');
   if (nav.style.display === 'flex' && nav.style.opacity === '1') {
     nav.style.opacity = '0';
@@ -47,7 +49,7 @@ function toggle() {
   }
 }
 
-//grab array of cards (li) > pick the right one > expand(add class ".target" and modify ".contentBx" properties)
+//grab array of splide cards (li) > pick the right one > expand(add class ".target" and modify ".contentBx" properties)
 let navUl = [].slice.call(document.querySelectorAll('.splide__list > li'));
 for (let i = 0; i < navUl.length; i++) {
   navUl[i].addEventListener('click', expand);
