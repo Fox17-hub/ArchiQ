@@ -11,19 +11,25 @@ document.addEventListener( 'DOMContentLoaded', function() {
 } );
 
 //splide logo
+
 document.addEventListener( 'DOMContentLoaded', function() {
   var splide = new Splide( '.splide__logos', {
-    type   : 'loop',
+    type: 'loop',
     padding: '5rem',
-    autoplay: true,
     rewind: true,
+    wheel: true,
     perPage: 4,
-    perMove: 4,
-    rewindSpeed: '100',
-    padding: '1rem',
-    pauseOnHover: true,
+    perMove: 1,
+    lazyLoad: 'nearby',
+    autoScroll: {
+      speed: 1,
+      pauseOnHover: true,
+      pauseOnFocus: true,
+      autoStart: true,
+      rewind: false,
+    },
   } );
-  splide.mount();
+  splide.mount(window.splide.Extensions);
 } );
 
 const toggle = document.getElementById('nav-btn');

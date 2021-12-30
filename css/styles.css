@@ -690,7 +690,6 @@
 
 .activities__secondBx .textBx .firstText {
   padding: 10rem !important;
-  background-color: transparent;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -698,6 +697,7 @@
 .activities__secondBx .textBx .secondText {
   padding: 10rem !important;
   background-color: #0d0768;
+  height: 100%;
 }
 
 .archetypes {
@@ -803,10 +803,10 @@
   -o-object-fit: cover;
      object-fit: cover;
   background: white;
-  width: 500px;
-  height: 500px;
+  width: 31.25rem;
+  height: 31.25rem;
   background-color: transparent;
-  border-radius: 50%;
+  border-radius: 17rem;
   border: 10px solid white;
   -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
           box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
@@ -883,9 +883,9 @@
   -o-object-fit: cover;
      object-fit: cover;
   background: white;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
+  width: 31.25rem;
+  height: 31.25rem;
+  border-radius: 17rem;
   border: 10px solid white;
   -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
           box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
@@ -1041,6 +1041,7 @@
 }
 
 .aboutUs__container .c-tromb .group-photos__item .group-photos__desc {
+  position: relative;
   width: 100%;
   padding: 0.5rem;
   font-size: 0.9rem;
@@ -1126,6 +1127,12 @@
   margin: auto;
   padding: 0;
   width: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 10px;
   -webkit-filter: drop-shadow(2px 4px 6px black);
           filter: drop-shadow(2px 4px 6px black);
@@ -1134,11 +1141,11 @@
 .aboutUs__container .splide__logos .am-logo {
   -webkit-filter: invert(10%) sepia(42%) saturate(1286%) hue-rotate(340deg) brightness(103%) contrast(104%) drop-shadow(2px 4px 6px black);
           filter: invert(10%) sepia(42%) saturate(1286%) hue-rotate(340deg) brightness(103%) contrast(104%) drop-shadow(2px 4px 6px black);
+  width: 8rem;
 }
 
-.aboutUs__container .splide__logos .sarif-logo,
-.aboutUs__container .splide__logos .am-logo {
-  width: 10rem;
+.aboutUs__container .splide__logos .logo__item--size {
+  width: 12rem;
 }
 
 .aboutUs__container .splide__logos .vt-logo {

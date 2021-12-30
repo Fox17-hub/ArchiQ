@@ -81,11 +81,11 @@
             z-index: 1;
 
             transition: all 0.2s ease-in-out;
-                
-                &:hover{
-                    text-shadow: 0px 0px 5px white;
-                    transform: scale(1.2) translate(0%, 0%);
-                }
+
+            &:hover {
+                text-shadow: 0px 0px 5px white;
+                transform: scale(1.2) translate(0%, 0%);
+            }
         }
 
         .navBx {
@@ -105,13 +105,14 @@
                 list-style: none;
             }
 
-            &__list-item{
+            &__list-item {
                 transition: all 0.2s ease-in-out;
-                
-                &:hover{
+
+                &:hover {
                     transform: scale(1.2) translate(0%, -10%);
                 }
             }
+
             &__links {
                 height: 80px;
                 width: 100%;
@@ -129,7 +130,8 @@
                     box-shadow: 0px 11px 10px -10px rgba(255, 255, 255, 0.7);
                     padding-bottom: 3px;
                 }
-                &:hover .nav__list-item{
+
+                &:hover .nav__list-item {
                     transform: scale(1.2);
                 }
             }
@@ -576,13 +578,13 @@
 
             .firstText {
                 padding: 10rem !important;
-                background-color: transparent;
                 backdrop-filter: blur(10px);
             }
 
             .secondText {
                 padding: 10rem !important;
                 background-color: $coolIndigo;
+                height: 100%;
             }
         }
     }
@@ -674,10 +676,10 @@
             position: relative;
             object-fit: cover;
             background: white;
-            width: 500px;
-            height: 500px;
+            width: 31.25rem;
+            height: 31.25rem;
             background-color: transparent;
-            border-radius: 50%;
+            border-radius: 17rem;
             border: 10px solid white;
             box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
 
@@ -733,9 +735,9 @@
             position: relative;
             object-fit: cover;
             background: white;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
+            width: 31.25rem;
+            height: 31.25rem;
+            border-radius: 17rem;
             border: 10px solid white;
             box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
             background-color: rgba(0, 0, 0, 0.5);
@@ -779,7 +781,7 @@
     display: flex;
     flex-direction: column;
 
-    .values{
+    .values {
         width: 75%;
         margin: 5rem auto;
         border-radius: 2rem;
@@ -788,31 +790,31 @@
         box-shadow: 0px 0px 5px 0px black;
     }
 
-    .grid{
+    .grid {
         width: 100%;
         padding: 0 4rem 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-column-gap: 2rem;
-        
-        &-item{
+
+        &-item {
             position: relative;
             padding: 1rem 0 0;
-            
-            &--underline{
+
+            &--underline {
                 border-bottom: 2px solid white;
             }
         }
 
-        &__title{
+        &__title {
             font-weight: bold;
             text-transform: uppercase;
             font-size: 2rem;
             color: $coolOrange;
         }
 
-        &__text{
+        &__text {
             padding: 1rem 1rem 0;
             font-size: 1rem;
             color: white;
@@ -860,6 +862,7 @@
                 }
 
                 .group-photos__desc {
+                    position: relative;
                     width: 100%;
                     padding: 0.5rem;
 
@@ -932,6 +935,8 @@
             margin: auto;
             padding: 0;
             width: 15rem;
+            display: flex;
+            justify-content: center;
 
             border-radius: 10px;
             filter: drop-shadow(2px 4px 6px black);
@@ -939,11 +944,11 @@
 
         .am-logo {
             filter: invert(10%) sepia(42%) saturate(1286%) hue-rotate(340deg) brightness(103%) contrast(104%) drop-shadow(2px 4px 6px black);
+            width: 8rem;
         }
 
-        .sarif-logo,
-        .am-logo {
-            width: 10rem;
+        .logo__item--size {
+            width: 12rem;
         }
 
         .vt-logo {

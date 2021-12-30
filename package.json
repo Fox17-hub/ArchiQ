@@ -4,7 +4,8 @@
   "description": "",
   "main": "script.js",
   "dependencies": {
-    "@splidejs/splide": "^3.1.7"
+    "@splidejs/splide": "^3.1.7",
+    "@splidejs/splide-extension-auto-scroll": "^0.3.3"
   },
   "devDependencies": {},
   "scripts": {
