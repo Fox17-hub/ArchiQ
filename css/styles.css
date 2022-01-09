@@ -5,8 +5,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins';
-  font-weight: 300;
   scroll-behavior: smooth;
 }
 
@@ -26,7 +24,25 @@
 }
 
 .body {
-  background-color: #202020;
+  background: url("../img/headerSky.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  will-change: auto;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.body::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(32, 32, 32, 0.3);
+  position: fixed;
+  will-change: auto;
 }
 
 .body .blurred-hr {
@@ -271,30 +287,11 @@
 }
 
 .banner {
-  position: absolute;
-  z-index: -10;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #202020;
-}
-
-.banner__img {
-  position: fixed;
-  z-index: 1;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0.5;
-  background: url("../img/headerSky.jpg") no-repeat;
-  background-size: cover;
-  will-change: auto;
-  -webkit-filter: contrast(1.1) brightness(1.1);
-          filter: contrast(1.1) brightness(1.1);
 }
 
 .banner__contentBx {
@@ -465,7 +462,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  margin-top: 100vh;
 }
 
 .activities__firstBx {
@@ -956,6 +952,13 @@
           box-shadow: 0px 0px 5px 0px black;
 }
 
+.aboutUs__container .values__title {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 3rem;
+}
+
 .aboutUs__container .grid {
   width: 100%;
   padding: 0 4rem 2rem;
@@ -980,7 +983,7 @@
 .aboutUs__container .grid__title {
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #f18f01;
 }
 
@@ -1016,16 +1019,17 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  grid-column-gap: 4rem;
+  grid-column-gap: 1.5rem;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 2rem 1.5rem 0;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .aboutUs__container .c-tromb .group-photos__item {
-  margin: 0 0 2rem 0;
+  margin: 0 auto 2rem;
   position: relative;
-  width: 20%;
-  border-radius: 0.5rem;
+  width: 22%;
   overflow: hidden;
   -webkit-box-shadow: 0px 0px 5px 0px black;
           box-shadow: 0px 0px 5px 0px black;
@@ -1073,16 +1077,14 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 250vh;
 }
 
 .aboutUs__container .partenaires__container .partenaires__title {
-  height: 1rem;
   font-size: 44px;
   color: white;
   left: 50%;
   width: 100%;
-  margin: 0 auto;
+  margin: 1rem auto 0;
   text-align: center;
 }
 
@@ -1104,7 +1106,6 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  grid-gap: 4rem;
   position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1142,6 +1143,7 @@
   -webkit-filter: invert(10%) sepia(42%) saturate(1286%) hue-rotate(340deg) brightness(103%) contrast(104%) drop-shadow(2px 4px 6px black);
           filter: invert(10%) sepia(42%) saturate(1286%) hue-rotate(340deg) brightness(103%) contrast(104%) drop-shadow(2px 4px 6px black);
   width: 8rem;
+  margin: 1rem;
 }
 
 .aboutUs__container .splide__logos .logo__item--size {
