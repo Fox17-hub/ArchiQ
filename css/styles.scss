@@ -777,19 +777,36 @@
 .aboutUs__container {
     display: flex;
     flex-direction: column;
-
-    .values {
-        width: 75%;
-        margin: 5rem auto;
-        border-radius: 2rem;
-        background-color: rgba(0, 0, 0, 0.5);
+    
+    .section__contentBx--transparentBg{
+        padding: 0;
+        width: 80%;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(0.5rem);
         box-shadow: 0px 0px 5px 0px black;
+
+    }
+
+    .c-chart {
+        position: relative;
+        width: 75%;
+        margin: 5rem 0;
+        border-radius: 0.5rem;
         
+        background-color: rgba(255, 255, 255, 0.2);
         &__title{
             justify-content: flex-start;
             margin: 0 3rem;
         }
+    }
+
+    .values{
+        left: -5%;
+    }
+
+    .results{
+        right: -30%;
     }
 
     .grid {
@@ -811,6 +828,7 @@
 
         &__title {
             font-weight: bold;
+            height: 3.5rem;
             text-transform: uppercase;
             font-size: 1.8rem;
             color: $coolOrange;
@@ -821,7 +839,6 @@
             font-size: 1rem;
             color: white;
             text-align: justify;
-            word-break: break-all;
         }
     }
 

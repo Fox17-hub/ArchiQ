@@ -23,7 +23,6 @@ let app = {
       window.setTimeout(function() {
       nav.style.display = 'none';
       },350);
-      console.log('hide');
     }
     else {
       nav.style.display = 'flex';
@@ -31,7 +30,6 @@ let app = {
       nav.style.opacity = '1';
       }, 100);
       document.getElementById('toggle').checked = true;
-      console.log('show');
     }
   },
 
