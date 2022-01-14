@@ -39,6 +39,7 @@ let app = {
         padding: '5rem',
         perPage: 3,
         perMove: 1,
+        wheel: true,
         rewind : true,
       } );
       app.mainSplide.mount();
