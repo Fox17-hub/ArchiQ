@@ -8,6 +8,7 @@ let app = {
     app.displayMainSplide();
     app.expandHandler();
     app.displaybBottomSlide();
+    app.modalHandler();
   },
 
   navHandler(){
@@ -72,6 +73,84 @@ let app = {
     }
   },
   
+  modalHandler(){
+    let circles = [].slice.call(document.querySelectorAll('.circle'));
+    circles.forEach(circle => {
+      circle.addEventListener('click', app.displayModal);  
+    });
+    
+  },
+
+  displayModal(e){
+    let circle = e.currentTarget;
+    let circleParent = circle.parentNode;
+    let siblings = circleParent.childNodes;
+
+    console.log(siblings);
+    let modal = siblings[5];
+    
+    modal.classList.toggle('showModal');
+    let contentBx = modal.childNodes[1];
+
+    if(contentBx.classList.contains('modal__contentBx--right')){
+      setTimeout(() => {
+        contentBx.style.left = "25%";
+      }, 50); 
+      switch (contentBx.style.left){
+        case '25%':  
+        setTimeout(() => {
+          contentBx.style.left = "100%";
+        }, 100);  
+          break;
+        case '100%':
+          setTimeout(() => {
+            contentBx.style.left = "25%";
+          }, 50);  
+          break;
+      }
+      let closeIcn = contentBx.childNodes[5];
+      closeIcn.addEventListener('click', ()=>{
+          contentBx.style.left = "100%";
+          setTimeout(() => {
+            modal.classList.remove('showModal');
+            body.classList.remove('body__modal-open');  
+          }, 200);
+      })
+    }
+    else if(contentBx.classList.contains('modal__contentBx--left')){
+      
+      setTimeout(() => {
+        contentBx.style.right = "25%";
+      }, 50); 
+      switch (contentBx.style.right){
+        case '25%':  
+        setTimeout(() => {
+          contentBx.style.right = "100%";
+        }, 100);  
+          break;
+        case '100%':
+          setTimeout(() => {
+            contentBx.style.right = "25%";
+          }, 50);  
+          break;
+      }
+      let closeIcn = contentBx.childNodes[5];
+      closeIcn.addEventListener('click', ()=>{
+          contentBx.style.right = "100%";
+          setTimeout(() => {
+            modal.classList.remove('showModal');
+            body.classList.remove('body__modal-open');  
+          }, 200);
+      })
+    }
+    
+
+    
+    
+    let body = document.querySelector('.body');
+    body.classList.toggle('body__modal-open');
+  },
+
   displaybBottomSlide(){
     app.bottomSplide = new Splide( '.splide__logos', {
         type: 'loop',
