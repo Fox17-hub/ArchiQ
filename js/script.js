@@ -144,9 +144,6 @@ let app = {
       })
     }
     
-
-    
-    
     let body = document.querySelector('.body');
     body.classList.toggle('body__modal-open');
   },

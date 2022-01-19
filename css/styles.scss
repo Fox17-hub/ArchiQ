@@ -905,25 +905,9 @@
         padding: 0;
         width: 80%;
         margin: auto;
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(0.5rem);
         box-shadow: 0px 0px 5px 0px black;
-
-        &::before{
-            content: "";
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            background-image: url(../img/d64mw8u-15e69551-6a73-479c-be7f-5636e6ac5233.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            opacity: 0.4;
-            position: fixed;
-            will-change: auto;
-        }
     }
 
     .c-chart {
@@ -979,6 +963,32 @@
             text-align: justify;
         }
     }
+
+    .locaux{
+        position: relative;
+        width: 90%;
+        min-height: 20rem;
+        margin: 2rem auto;
+        padding: 2rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        background-color: rgba(0, 0, 0, 0.2);
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-image: url(../img/d64mw8u-15e69551-6a73-479c-be7f-5636e6ac5233.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            will-change: auto;
+        }
+    }
+
 
     .c-tromb {
         position: relative;
@@ -1052,8 +1062,6 @@
         justify-content: center;
         padding: 2em 5em;
 
-        
-
         .partenaires__title {
             font-size: 44px;
             color: white;
@@ -1074,7 +1082,7 @@
     }
 
     .splide__logos {
-        width: 80%;
+        min-width: 80%;
         position: relative;
         margin: 0 0 5rem;
         bottom: 0;
@@ -1093,8 +1101,8 @@
         }
 
         .logo__item {
-            margin: auto;
-            padding: 0;
+            position: relative;
+            margin: 2rem auto;
             width: 15rem;
             display: flex;
             justify-content: center;
@@ -1106,7 +1114,7 @@
         .am-logo {
             filter: invert(10%) sepia(42%) saturate(1286%) hue-rotate(340deg) brightness(103%) contrast(104%) drop-shadow(2px 4px 6px black);
             width: 8rem;
-            margin: 1rem;
+            margin: 1rem auto;
         }
 
         .logo__item--size {
