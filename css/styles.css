@@ -734,6 +734,25 @@
   text-align: justify;
 }
 
+.archetypes .pia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 5rem;
+}
+
+.archetypes .eva {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 4rem 0;
+}
+
 .archetypes .circle {
   z-index: 1;
   display: -webkit-box;
@@ -898,10 +917,6 @@
   left: 0%;
 }
 
-.archetypes .AI__text {
-  margin: 2rem;
-}
-
 .archetypes .AI__textBx {
   position: relative;
   font-size: 20px;
@@ -910,27 +925,32 @@
 }
 
 .archetypes .AI__desc {
+  font-size: 1.5rem;
   margin: 5rem auto;
   text-align: justify;
 }
 
-.archetypes .pia {
+.archetypes .AI__button {
+  width: 50%;
+  height: 4rem;
+  padding: 1rem 2rem;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 5rem;
-}
-
-.archetypes .eva {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 4rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  background-color: #f18f01;
+  border: 0;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 5px black;
+          box-shadow: 0px 0px 5px black;
+  cursor: pointer;
 }
 
 .modal {
