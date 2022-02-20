@@ -12,7 +12,6 @@ let app = {
     app.displaybBottomSlide();
     app.modalHandler();
     app.audioHandler();
-    app.unloadHandler();
     app.orderHandler();
   },
 
@@ -213,7 +212,7 @@ let app = {
         console.log(app.audioplayed);
         console.log(piaAudio);
       } else if (app.audioplayed === 6) {
-        piaAudio = new Audio('./audio/GLaDOS-389701.wav');
+        piaAudio = new Audio('./audio/GLaDOS-389734.wav');
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed = 0;
@@ -264,7 +263,7 @@ let app = {
         console.log(app.audioplayed);
         console.log(piaAudio);
       } else if (app.audioplayed === 6) {
-        piaAudio = new Audio('./audio/GLaDOS-389701.wav');
+        piaAudio = new Audio('./audio/GLaDOS-389734.wav');
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed = 0;
