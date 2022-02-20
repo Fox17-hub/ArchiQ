@@ -397,7 +397,7 @@
           align-items: center;
   color: white;
   text-transform: uppercase;
-  height: 6.5rem;
+  height: 5.5rem;
   /*
                 //souligné + border rond
                 &::after{
@@ -678,33 +678,6 @@
   font-weight: bold;
 }
 
-.activities__secondBx {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-bottom: 2px solid #f18f01;
-}
-
-.activities__secondBx .textBx {
-  position: relative;
-  width: 50%;
-  text-align: justify;
-  font-size: 20px;
-  color: white;
-}
-
-.activities__secondBx .textBx .firstText {
-  padding: 10rem !important;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-}
-
-.activities__secondBx .textBx .secondText {
-  padding: 10rem !important;
-  background-color: #0d0768;
-  height: 100%;
-}
-
 .archetypes {
   position: relative;
   display: -webkit-box;
@@ -721,6 +694,7 @@
 
 .archetypes .section__contentBx--transparentBg {
   background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 5rem;
 }
 
 .archetypes .section__text {
@@ -753,6 +727,19 @@
   padding: 4rem 0;
 }
 
+.archetypes .aiBx {
+  margin: 2rem 0;
+  left: -5%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .archetypes .circle {
   z-index: 1;
   display: -webkit-box;
@@ -764,7 +751,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   -o-object-fit: cover;
      object-fit: cover;
   background: white;
@@ -772,7 +758,7 @@
   height: 32rem;
   background-color: transparent;
   border-radius: 17rem;
-  border: 10px solid white;
+  border: 5px solid white;
   -webkit-box-shadow: 0px 0px 10px 5px #f18f01;
           box-shadow: 0px 0px 10px 5px #f18f01;
   background-color: rgba(0, 0, 0, 0.5);
@@ -824,9 +810,8 @@
   text-align: center;
 }
 
-.archetypes .circle__desc {
-  margin: 5rem auto;
-  text-align: justify;
+.archetypes .circle-desc {
+  color: white;
 }
 
 .archetypes .circle-title {
@@ -930,7 +915,7 @@
   text-align: justify;
 }
 
-.archetypes .AI__button {
+.archetypes .AI__order-button {
   width: 50%;
   height: 4rem;
   padding: 1rem 2rem;
@@ -1132,7 +1117,6 @@
   padding: 1rem 1rem 0;
   font-size: 1rem;
   color: white;
-  text-align: justify;
 }
 
 .aboutUs__container .locaux {
@@ -1144,20 +1128,6 @@
   overflow: hidden;
   border-radius: 1rem;
   background-color: rgba(0, 0, 0, 0.2);
-}
-
-.aboutUs__container .locaux::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-image: url(../img/d64mw8u-15e69551-6a73-479c-be7f-5636e6ac5233.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  will-change: auto;
 }
 
 .aboutUs__container .c-tromb {
@@ -1333,6 +1303,48 @@
 .aboutUs__container .splide__logos .logo__item--white {
   -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%) drop-shadow(2px 4px 6px black);
           filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%) drop-shadow(2px 4px 6px black);
+}
+
+.contactBx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px solid #f18f01;
+}
+
+.contactBx__textBx {
+  position: relative;
+  width: 50%;
+  height: 50rem;
+  text-align: justify;
+  font-size: 20px;
+  color: white;
+}
+
+.contactBx__textBx--first {
+  padding: 10rem !important;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: #0d0768;
+}
+
+.contactBx__textBx--first::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url(../img/d64mw8u-15e69551-6a73-479c-be7f-5636e6ac5233.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  will-change: auto;
+}
+
+.contactBx__textBx--second {
+  padding: 10rem !important;
+  background-color: #0d0768;
 }
 
 .footer {
