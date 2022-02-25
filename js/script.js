@@ -1,15 +1,11 @@
 let app = {
   navUl: [],
-  mainSplide: null,
-  bottomSplide: null,
   audioCount: 0,
   audioplayed: 0,
 
   init() {
     app.navHandler();
-    app.displayMainSplide();
     app.expandHandler();
-    app.displaybBottomSlide();
     app.modalHandler();
     app.audioHandler();
     app.orderHandler();
@@ -35,18 +31,6 @@ let app = {
       }, 100);
       document.getElementById('toggle').checked = true;
     }
-  },
-
-  displayMainSplide() {
-    app.mainSplide = new Splide('.splide', {
-      type: 'loop',
-      padding: '5rem',
-      perPage: 3,
-      perMove: 1,
-      wheel: true,
-      rewind: true,
-    });
-    app.mainSplide.mount();
   },
 
   //grab array of splide cards (li) > pick the right one > expand(add class ".target" and modify ".contentBx" properties)
@@ -79,7 +63,8 @@ let app = {
     circles.forEach(circle => {
       circle.addEventListener('click', app.displayModal);
     });
-
+    let contactBtn = document.querySelector('.contactForm__btn');
+    contactBtn.addEventListener('click', app.displayAttribModal);
   },
 
   displayModal(e) {
@@ -146,26 +131,6 @@ let app = {
 
     let body = document.querySelector('.body');
     body.classList.toggle('body__modal-open');
-  },
-
-  displaybBottomSlide() {
-    app.bottomSplide = new Splide('.splide__logos', {
-      type: 'loop',
-      padding: '5rem',
-      rewind: true,
-      wheel: true,
-      perPage: 4,
-      perMove: 1,
-      lazyLoad: 'nearby',
-      autoScroll: {
-        speed: 1,
-        pauseOnHover: true,
-        pauseOnFocus: true,
-        autoStart: true,
-        rewind: false,
-      },
-    });
-    app.bottomSplide.mount(window.splide.Extensions);
   },
 
   audioHandler() {
@@ -296,6 +261,24 @@ let app = {
     setTimeout(() => {
       app.audioCount = 0;
     }, 4000);
+  },
+
+  displayAttribModal(e){
+    e.preventDefault();
+    
+    let body = document.querySelector('.body');
+    body.classList.toggle('body__modal-open');
+    let attribModal = document.querySelector('.attribMod');
+    attribModal.classList.toggle('showModal');
+    let closeIcn = document.querySelector('.attribMod__close-icon');
+    console.log(closeIcn);
+    closeIcn.addEventListener('click', () => {
+      console.log('lol');
+        setTimeout(() => {
+          attribModal.classList.remove('showModal');
+          body.classList.remove('body__modal-open');
+        }, 200);
+      })
   },
 }
 

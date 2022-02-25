@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
-
+    <link rel="stylesheet" href="./css/splide.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
@@ -31,7 +32,7 @@
                         <li class="nav__list-item"><a class="nav__links" href="#activities">Activities</a></li>
                         <li class="nav__list-item"><a class="nav__links" href="#archetypes">Archetypes</a></li>
                         <li class="nav__list-item"><a class="nav__links" href="#aboutUs">About Us</a></li>
-                        <li class="nav__list-item"><a class="nav__links" href="#">Contact</a></li>
+                        <li class="nav__list-item"><a class="nav__links" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -91,7 +92,7 @@
                                                     class="slide__desc--strong">ArchOS</strong></span>.</p>
                                     </div>
                                 </div>
-                                <img class="slide__img" src="./img/Singapore-Aerial-view-Cool-Tech.jpg">
+                                <img class="slide__img" src="./img/Singapore-Aerial-view-Cool-Tech.jpg" alt="smartcity illustration">
                                 <div class="slide__hiddenBx">
                                     <p class="slide__text">Great news ! Because we noticed you track down WiFi
                                         hotspots like detectives stalks unfaithful wives, we're allowing you to heavily
@@ -118,7 +119,7 @@
                                     </div>
                                 </div>
                                 <img class="slide__img"
-                                    src="./img/Open-Source_3D_printed_Poppy_humanoid_robot_(head).jpg">
+                                    src="./img/Open-Source_3D_printed_Poppy_humanoid_robot_(head).jpg" alt="robot illustration">
                                 <div class="slide__hiddenBx">
                                     <p class="slide__text">If it has <span class="orange">real feelings</span>,
                                         it'll start judging you and it won't bear you treating it like garbage for long.
@@ -150,7 +151,7 @@
                                                     class="slide__desc--strong">dream</strong></span> job !</p>
                                     </div>
                                 </div>
-                                <img class="slide__img" src="./img/Medtech_Large_Icon.jpeg">
+                                <img class="slide__img" src="./img/Medtech_Large_Icon.jpeg" alt="medtech illustration">
                                 <div class="slide__hiddenBx">
                                     <p class="slide__text"> "Basic health" is not good enough for you; you are
                                         truely special, you deserves better. <br> In that regard, you can now subscribe
@@ -182,7 +183,7 @@
                                                     class="slide__text--strong">big</strong></span> everytime. </p>
                                     </div>
                                 </div>
-                                <img class="slide__img" src="./img/150505-F-SI788-099.jpg">
+                                <img class="slide__img" src="./img/150505-F-SI788-099.jpg" alt="aeronautics illustration">
                                 <div class="slide__hiddenBx">
                                     <p class="slide__text">The War era is over. We worked relentlessly on
                                         efficient ways to take a maximum of lives in a minimum amount of time and
@@ -211,7 +212,7 @@
                                             the unreachable star: running away from problems.</p>
                                     </div>
                                 </div>
-                                <img class="slide__img" src="./img/florida-kennedy-space-center-rocket-launch.jpg">
+                                <img class="slide__img" src="./img/florida-kennedy-space-center-rocket-launch.jpg" alt="space illustration">
                                 <div class="slide__hiddenBx">
                                     <p class="slide__text">After we realised Earth had issues (and a toxic
                                         personality), we thought it was time for mankind to take some time apart.. To
@@ -241,7 +242,11 @@
                                             your data? Yes, you did.</p>
                                     </div>
                                 </div>
-                                <img class="slide__img" src="./img/b3c67e9e54bd3f0deeab60281277a569.png">
+                                <picture class="slide__img">
+                                    <source type="image/webp" srcset="img\inspiration-azure.webp">
+                                    <source type="image/jpeg" srcset="./img/b3c67e9e54bd3f0deeab60281277a569.png">
+                                    <img class="slide__img" src="./img/b3c67e9e54bd3f0deeab60281277a569.png" alt="data management illustration">
+                                </picture>
                                 <div class="slide__hiddenBx">
                                     <p class="slide__text">Lorem ipsum dolor sit amet consectetur adipisicing
                                         elit. Obcaecati cupiditate quia distinctio ad dolores, adipisci non eos! Culpa
@@ -253,19 +258,27 @@
                     </ul>
                 </div>
             </div>
-
+            <hr class="hr blurred-hr">
+            <div class="section__outro">
+                <div class="section__textBx">
+                    <p class="section__text activities__firstBx">For the last two decades, Arch-IQ has worked in hand
+                        with the brightest minds and the most
+                        talented workers around the globe and beyond. Our story is theirs.</p>
+                </div>
+            </div>
         </section>
 
-        <hr class="hr blurred-hr">
         <section class="section archetypes">
             <div class="section__contentBx section__contentBx--transparentBg">
-                <div class="section__heading">
-                    <h1 class="section__title" id="archetypes">Archetypes</h1>
-                    <div class="title__line"></div>
+                <div class="section__intro">
+                    <div class="section__heading">
+                        <h1 class="section__title" id="archetypes">Archetypes</h1>
+                        <div class="title__line"></div>
+                    </div>
                 </div>
                 <div class="section__textBx">
                     <p class="section__text">With the most extraordinary AI technology you could ever hope for, our
-                        smart assistants turns human/machine interaction into a wondrous experience.</p>
+                        smart archetypes turns human/machine interaction into a wondrous experience.</p>
                 </div>
                 <hr class="hr hr--white">
                 <article class="AI pia">
@@ -360,9 +373,11 @@
         <section class="section aboutUs__container">
 
             <div class="section__contentBx section__contentBx--transparentBg">
-                <div class="section__heading aboutUs__heading">
-                    <h2 class="section__title" id="aboutUs">About us</h2>
-                    <div class="title__line"></div>
+                <div class="section__intro">
+                    <div class="section__heading aboutUs__heading">
+                        <h2 class="section__title" id="aboutUs">About us</h2>
+                        <div class="title__line"></div>
+                    </div>
                 </div>
 
 
@@ -371,12 +386,12 @@
                     <div class="grid">
                         <div class="grid-item--underline">
                             <h3 class="grid__title grid__title--orange">Human Progress</h3>
-                            <p class="grid__text">You believe in progress and so do we. Thanks for not asking what we
-                                mean by that, we wouldn't know what to say and you'd look stupid.</p>
+                            <p class="grid__text">You believe in progress and so do we.. Even if we don't know what it's
+                                supposed to mean.</p>
                         </div>
                         <div class="grid-item--underline">
                             <h3 class="grid__title grid__title--orange">Innovation</h3>
-                            <p class="grid__text">It's new, so it's rare, so it worth a lot.</p>
+                            <p class="grid__text">If it's new, it's rare; if it's rare, it probably worth a lot.</p>
                         </div>
                         <div class="grid-item--underline">
                             <h3 class="grid__title grid__title--orange">Work ethic</h3>
@@ -426,7 +441,7 @@
                         </div>
                         <div class="grid-item">
                             <h3 class="grid__title"><span class="grid__title--orange">17%</span> annual growth</h3>
-                            <p class="grid__text">And that's a lot of money.</p>
+                            <p class="grid__text">"Wow, that's a lot of money." - Our partners</p>
                         </div>
                     </div>
                 </article>
@@ -518,16 +533,17 @@
 
                 </div>
                 <hr>
-                <article class="contact">
+                <article class="contact" id="contact">
                     <h2 class="section__subtitle">Contact Us</h2>
+                    <div class="section__textBx">
+                        <p class="section__text activities__firstBx">Done with the visite? Send us a message to end the
+                            experience !</p>
+                    </div>
                     <div class="contactBx">
                         <div class="contactBx__textBx contactBx__textBx--first">
-                            
-
                         </div>
                         <div class="contactBx__textBx contactBx__textBx--second">
                             <form action="POST" class="contactForm">
-                                <legend class="contactForm__legend">Contact</legend>
                                 <fieldset class="contactForm__fieldset">
                                     <div class="contactForm__inputBx">
                                         <label for="lastname" class="contactForm__input-label">Nom</label>
@@ -543,28 +559,89 @@
                                         <label for="email" class="contactForm__input-label">Email</label>
                                         <input type="text" class="contactForm__input" name="email">
                                     </div>
+                                </fieldset>
+
+                                
+                                <fieldset class="contactForm__fieldset">
+                                    <div class="contactForm__inputBx">
+                                        <label for="department" class="contactForm__input-label">How can we help
+                                            you?</label>
+                                        <select name="department" id="" class="contactForm__input--select">
+                                            <option value="" class="contactForm__option">I want a discount</option>
+                                            <option value="" class="contactForm__option">I live by an Arch-IQ center and
+                                                my water is purple</option>
+                                            <option value="" class="contactForm__option">My AI sold my company without
+                                                my consent</option>
+                                            <option value="" class="contactForm__option">My AI snitched on me to the
+                                                feds</option>
+                                            <option value="" class="contactForm__option">AI called me "a morron"/"a
+                                                cunt"</option>
+                                            <option value="" class="contactForm__option">My AI and me don't get along
+                                            </option>
+                                            <option value="" class="contactForm__option">My AI's not responding anymore
+                                            </option>
+                                            <option value="" class="contactForm__option">My AI tried to kill my pet
+                                            </option>
+                                            <option value="" class="contactForm__option">My AI tried to kill me</option>
+                                            <option value="" class="contactForm__option">My AI tried to hack the
+                                                Pentagon</option>
+                                            <option value="" class="contactForm__option">My AI tries to take over the
+                                                world</option>
+                                            <option value="" class="contactForm__option">My AI is planning an holocaust
+                                            </option>
+                                        </select>
+                                    </div>
                                     <div class="contactForm__inputBx">
                                         <label for="email" class="contactForm__input-label">Message</label>
                                         <textarea name="message" id="message" cols="30" rows="10"
-                                            placeholder="Votre message..." class="contactForm__input textarea"></textarea>
+                                            placeholder="Votre message..."
+                                            class="contactForm__input textarea"></textarea>
                                     </div>
                                 </fieldset>
 
                                 <!-- <button class="contactForm__btn">Valider</button> -->
-                                <a href="#" class="contactForm__btn">Valider</a>
+                                <a href="" class="contactForm__btn">Valider</a>
                             </form>
                         </div>
+
+                    </div>
+                    <div class="section__textBx contactBx__message">
+                        <p class="section__text activities__firstBx"></p>
                     </div>
                 </article>
             </div>
         </section>
     </main>
+    <aside class="aside">
+        <div class="attribMod">
+            <div class="attribMod__contentBx">
+                <span class="attribMod__close-icon">&times;</span>
+                <div class="attribMod__textBx">
+                    
+                <h2 class="attribMod__title">About this site</h2>
+                <p class="attribMod__text">Dear User,<br>
+                    If it isn't obvious by now, this site is a parody. Arch-IQ is a fictive company and you can't buy any of our AI's. I made this site has two purpose:
+                    <ul>
+                        <li>offering you a meta - and hopefully funny - experiment about futur technologies.</li>
+                        <li>Showing my early programming skills</li>
+                    </ul>
+                    I hope you enjoyed navigating on this site as much as I enjoyed building it.
+                    For more info about the Arch-IQ project, take a look at it's <a href="">repo</a>. <br>
+                    Since I've completed this task, I've integrated a bootcamp and I'm on my way to be a good ass Fullstack Developper, you'll find my next projects on <a href="">github</a>.<br>
+                    <br>
+                    Again, thanks for visiting,<br>
+                    Khadim Renahy-Mar                    
+                </p>
+                </div>
+            </div>
+        </div>
+    </aside>
 
     <footer class="footer">
-        <hr class="hr blurred-hr">
-        
     </footer>
+    <hr class="hr blurred-hr">
     <script src="./js/script.js"></script>
+    <script src="./js/splide.js"></script>
 
 
 </body>
