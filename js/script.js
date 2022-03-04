@@ -22,6 +22,10 @@ let app = {
   navHandler() {
     const toggle = document.getElementById('nav-btn');
     toggle.addEventListener('click', app.toggleNav);
+    const navLinks = [].slice.call(document.querySelectorAll('.nav__links'));
+    navLinks.forEach(link => {
+      link.addEventListener('click', app.toggleNav);      
+    });
   },
 
   toggleNav() {

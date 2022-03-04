@@ -332,6 +332,10 @@
             color: white;
             text-transform: uppercase;
             height: 5.5rem;
+
+            &--margin{
+                margin-left: 5rem;
+            }
         }
 
         .title__line {
@@ -459,7 +463,7 @@
                     padding: 0;
                     top: 30%;
                     left: 40%;
-                    font-size: 3.5rem;
+                    font-size: 3.5vw;
                     color: white;
                 }
 
@@ -467,7 +471,7 @@
                     z-index: 2;
                     position: absolute;
                     left: 70%;
-                    font-size: 2.5rem;
+                    font-size: 2.5vw;
                     top: 40%;
                     color: rgba(255, 255, 255, 0.7);
                     transition: all 2s ease-in-out;
@@ -495,8 +499,8 @@
                 position: absolute;
                 opacity: 1;
                 top: 80%;
-                left: 31.25rem;
-                width: 34.375rem;
+                left: 27.5vw;
+                width: 29.1vw;
                 transform: translate(-50%, -50%);
                 -ms-transform: translate(-50%, -50%);
                 display: flex;
@@ -523,7 +527,7 @@
             transition: all 1s ease-in-out;
             width: 549.438px;
             position: relative;
-            left: 5%;
+            left: 3%;
             align-items: center;
             text-align: justify;
             padding: 5rem;
@@ -1008,10 +1012,20 @@
     }
 }
 
+.contact{
+    &__firstBx{
+
+        padding-bottom: 3rem !important;
+        padding-top: 4rem;
+        font-size: 22px;
+        text-align: center;
+        position: relative;
+    }
+}
 .contactBx {
     display: flex;
     flex-wrap: wrap;
-
+    
     &__textBx {
         position: relative;
         width: 50%;
@@ -1095,7 +1109,9 @@
             border-radius: 1rem;
             background-color: rgba(255, 255, 255, 0.7);
             color: $coolIndigo;
+            border: 0;
             box-shadow: 0px 0px 5px 2px black;
+            font-size: 1.2rem;
 
             &:hover {
                 background-color: rgba(241, 143, 1, 0.8);
@@ -1344,7 +1360,6 @@
     }
 }
 
-
 @media screen and (max-width: 1600px) {
 
     .header .nav__bar .nav__links {
@@ -1361,9 +1376,10 @@
     }
 
     .activities .splide__slide__container .slide__contentBx .slide__textBx {
-        left: 430px !important;
-        width: 400px !important;
+        left: 22.8vw !important;
     }
+
+    .section__title
 
     .activities .splide__slide__container .slide__hiddenBx {
         left: 2% !important;
@@ -1404,9 +1420,16 @@
     .section__heading .section__title {
         font-size: 5vw;
     }
-
+    .section__heading .section__title--margin{
+        margin-left: 6rem;
+    }
     .activities .splide__slide__container {
         height: 650px !important;
+    }
+
+    .activities .splide__slide__container .slide__hiddenBx {
+        width: 31vw !important;
+        padding: 5vw !important;
     }
 
     .archetypes .circle {
@@ -1467,7 +1490,6 @@
 }
 
 
-
 @media screen and (max-width: 1200px) {
     .header .nav__bar .nav__links {
         padding-right: 0;
@@ -1479,7 +1501,7 @@
     }
 
     .section__heading {
-        padding-left: 15vw;
+        padding-left: 5vw;
     }
 
     .section__intro {
@@ -1494,8 +1516,13 @@
         font-size: 5vw;
     }
 
-    .activities .splide__slide__container .slide__contentBx .slide__header .slide__sub-title {
-        font-size: 2rem !important;
+    .activities__firstBx, .contact__firstBx {
+        padding-top: 2.5vw;
+        padding-bottom: 3vw !important;
+    }
+
+    .activities .splide__slide__container {
+        height: 500px !important;
     }
 
     .aboutUs__container .grid {
@@ -1534,6 +1561,11 @@
         margin: 0 4rem !important;
     }
 
+    .contact__firstBx{
+        margin: 0 2rem;
+        padding-top: 0;
+    }
+
     .contactBx .contactForm__input--select,
     .contactBx .contactForm__input {
         font-size: 1.5vw;
@@ -1545,32 +1577,7 @@
         top: 7rem;
     }
 
-    .activities__firstBx {
-        padding-top: 2.5vw;
-        padding-bottom: 3vw !important;
-    }
-
-    .activities .splide__slide__container {
-        height: 500px !important;
-    }
-
-    .activities .splide__slide__container .slide__contentBx .slide__header .slide__title {
-        font-size: 3.5vw !important;
-    }
-
-    .activities .splide__slide__container .slide__contentBx .slide__header .slide__sub-title {
-        font-size: 2vw !important;
-    }
-
-    .activities .splide__slide__container .slide__hiddenBx {
-        width: 25rem !important;
-        padding: 5vw !important;
-    }
-
-    .activities .splide__slide__container .slide__desc,
-    .activities .splide__slide__container .slide__text {
-        font-size: 1.2vw;
-    }
+    
 
     .contactBx .contactForm__input-label {
         font-size: 2vw;
@@ -1604,8 +1611,12 @@
 }
 
 @media screen and (max-width: 970px) {
+    .banner__contentBx{
+        top: 40vh;
+    }
+
     .banner__icn {
-        top: 20vh;
+        top: 30vh;
         font-size: 5rem;
     }
 
@@ -1665,28 +1676,44 @@
 
     .section__heading .section__title{
         font-size: 5vh;
+        &--margin{
+            margin-left: 0;
+        }
     }
 
     .section__subtitle {
         font-size: 4vh;
     }
-
+    
     .activities .splide__slide {
         width: 100% !important;
     }
 
-    .activities .splide__slide__container .slide__hiddenBx {
-        align-items: flex-end;
+    .activities .splide__slide__container .slide__contentBx .slide__header .slide__sub-title{
+        font-size: 3.5vw;
+    }
+
+    .activities .splide__slide__container .slide__contentBx .slide__header .slide__title {
+        font-size: 4.5vw;
     }
 
     .activities .splide__slide__container .slide__contentBx .slide__textBx {
-        left: 385px !important;
-        width: 350px !important;
+        left: 50vw !important;
+        width: 45vw !important;
     }
 
     .archetypes .section__contentBx--transparentBg {
         width: 90%;
         margin: auto;
+    }
+
+    .activities .splide__slide__container .slide__hiddenBx{
+        width: 37vw !important;
+    }
+
+    .activities .splide__slide__container .slide__text{
+        position: relative;
+        top: 8vw;
     }
 
     .archetypes .pia,
@@ -1744,7 +1771,7 @@
 
     .aboutUs__container .c-tromb .group-photos__item {
         width: 100%;
-        max-width: 43vh;
+        max-width: 24vh;
         flex-wrap: wrap;
         margin: 2rem auto;
     }
