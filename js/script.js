@@ -11,7 +11,6 @@ let app = {
     
     app.displayMainSplide();
     app.displaybBottomSlide();
-
     app.modalHandler();
     app.audioHandler();
     app.orderHandler();
