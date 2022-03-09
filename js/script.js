@@ -29,10 +29,10 @@ let app = {
 
   toggleNav() {
     const nav = document.querySelector('nav');
-    console.log(window.screen.width);
-    const navBx = document.querySelector('.navBx');
+    // console.log(window.screen.width);
     const logoTitle = document.querySelector('.nav__logo');
-    
+    let header = document.querySelector('.header');
+
     if (nav.style.display === 'flex' && nav.style.opacity === '1') {
       nav.style.opacity = '0';
       document.getElementById('toggle').checked = false;
@@ -40,14 +40,18 @@ let app = {
       window.setTimeout(function () {
         nav.style.display = 'none';
         if(window.screen.width < 970){
-          navBx.style.margin = '0';
+          logoTitle.style.margin = '0';
+          header.style.alignItems = "center";
+          header.style.flexDirection = "row";
           console.log('close');
         }
       }, 350);
     } else {
       nav.style.display = 'flex';
       if(window.screen.width < 970){
-        navBx.style.margin = '3rem 0 0';
+        header.style.flexDirection = "column";
+        logoTitle.style.margin = '0 0 3rem';
+        
         console.log('open');
       }
       window.setTimeout(function () {

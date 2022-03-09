@@ -79,31 +79,117 @@
     position: fixed;
     width: 100vw;
     z-index: 10;
-    top: 0;
+    top: 0; 
+    display: flex;
+    align-items: center;
+    padding: 2rem 4rem;
+    box-shadow: 0px 2px 30px 0px black;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: inset 0px -10px 10px -10px rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(0.2rem);
+    }
+    
+
+    .nav-btn {
+        z-index: 10;
+        width: 5%;
+        height: 4vw;
+        padding: 2rem 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all 0.5s ease-out;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        &__toggle {
+            position: absolute;
+            display: flex;
+            border-radius: 10px;
+        }
+
+        &__label {
+            cursor: pointer;
+        }
+
+        &__input {
+            display: none;
+        }
+
+        &__label>.nav-btn__bars {
+            display: flex;
+            width: 35px;
+            height: 4.3px;
+            background-color: white;
+            position: relative;
+            border-radius: 10px;
+            transition: all 0.5s;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 9px;
+            margin-bottom: 9px;
+        }
+
+        &__label>#bar1 {
+            transform: rotateZ(0deg);
+            transform-origin: left bottom;
+        }
+
+        &__label>#bar3 {
+            transform: rotateZ(0deg);
+            transform-origin: left top;
+        }
+
+        #toggle:checked~label>#bar1 {
+            content: "";
+            background-color: $coolOrange;
+            transform: rotateZ(45deg) translate(2.5px, -2.5px);
+            visibility: visible;
+            margin: 0;
+            box-shadow: 0px 0px 10px 0px $coolOrange;
+        }
+
+        #toggle:checked~label>#bar3 {
+            content: "";
+            background-color: white;
+            transform: rotateZ(-45deg) translate(2.5px, 2.5px);
+            visibility: visible;
+            margin: 0;
+            box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
+        }
+
+        #toggle:checked~label>#bar2 {
+            visibility: hidden;
+            transition: all 0.5s var(--animation-curve);
+        }
+
+        &:hover>label>.bars {
+            background-color: $coolOrange;
+        }
+    }
 
     .nav__bar {
-        background-color: rgba(0, 0, 0, 0.25);
-        box-shadow: 0px 2px 30px 0px black;
-        padding: 2rem 4rem;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-            box-shadow: inset 0px -10px 10px -10px rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(0.2rem);
-        }
 
         .nav__logo {
+            z-index: 1;
             color: white;
+            padding: 1rem 0;
             text-decoration: none;
             font-size: 2rem;
             text-transform: uppercase;
             font-weight: 300;
             letter-spacing: 1px;
-            z-index: 1;
 
             transition: all 0.2s ease-in-out;
 
@@ -114,8 +200,6 @@
         }
 
         .navBx {
-            margin-right: 5%;
-            margin-left: 35%;
             display: flex;
         }
 
@@ -162,88 +246,7 @@
             }
         }
 
-        .nav-btn {
-            display: flex;
-            position: absolute;
-            right: 5%;
-            cursor: pointer;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            transition: all 0.5s ease-out;
-            width: 4vw;
-            height: 4vw;
-
-            &:hover {
-                background: rgba(0, 0, 0, 0.5);
-            }
-
-            &__toggle {
-                position: absolute;
-                display: flex;
-                border-radius: 10px;
-                padding: 1vw;
-            }
-
-            &__label {
-                cursor: pointer;
-            }
-
-            &__input {
-                display: none;
-            }
-
-            &__label>.nav-btn__bars {
-                display: flex;
-                width: 35px;
-                height: 4.3px;
-                background-color: white;
-                position: relative;
-                border-radius: 10px;
-                transition: all 0.5s;
-                flex-direction: column;
-                justify-content: space-between;
-                margin-top: 9px;
-                margin-bottom: 9px;
-            }
-
-            &__label>#bar1 {
-                transform: rotateZ(0deg);
-                transform-origin: left bottom;
-            }
-
-            &__label>#bar3 {
-                transform: rotateZ(0deg);
-                transform-origin: left top;
-            }
-
-            #toggle:checked~label>#bar1 {
-                content: "";
-                background-color: $coolOrange;
-                transform: rotateZ(45deg) translate(2.5px, -2.5px);
-                visibility: visible;
-                margin: 0;
-                box-shadow: 0px 0px 10px 0px $coolOrange;
-            }
-
-            #toggle:checked~label>#bar3 {
-                content: "";
-                background-color: white;
-                transform: rotateZ(-45deg) translate(2.5px, 2.5px);
-                visibility: visible;
-                margin: 0;
-                box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
-            }
-
-            #toggle:checked~label>#bar2 {
-                visibility: hidden;
-                transition: all 0.5s var(--animation-curve);
-            }
-
-            &:hover>label>.bars {
-                background-color: $coolOrange;
-            }
-        }
+        
     }
 }
 
@@ -1668,6 +1671,17 @@
 }
 
 @media screen and (max-width: 970px) {
+
+    
+    .header{    
+        backdrop-filter: blur(1rem) !important;
+        padding: 1rem 5rem;
+    }
+    
+    .header .nav-btn{
+        padding: 2rem;
+    }
+
     .banner__contentBx{
         top: 40vh !important;
     }
@@ -1693,16 +1707,17 @@
         background-color: rgba(0, 0, 0, 0.3);
     }
 
-    .header .nav__bar,
-    .header .nav__bar .nav__list {
+    .header .nav__bar{
         flex-direction: column;
+        margin: auto;
+    }
+
+    .header .nav__bar .nav__list {
         margin: 0;
         width: 100%;
+        flex-direction: column;
     }
-    .header .nav__bar{
-        
-        backdrop-filter: blur(1rem) !important;
-    }
+
 
 
     .header .nav__bar .nav__links:hover {
