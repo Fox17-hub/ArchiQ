@@ -1479,7 +1479,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1rem 0 2rem;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -1496,7 +1495,7 @@
   display: flex;
   padding: 0.5rem;
   border-radius: 1rem;
-  margin: 0 2rem;
+  margin: 2rem 2rem;
   fill: white !important;
   cursor: pointer;
   -webkit-transform: scale(1.5);
@@ -2173,7 +2172,7 @@
     width: 90%;
   }
   .contactBx .contactForm__input--select, .contactBx .contactForm__input {
-    font-size: 3vw;
+    font-size: 4vw;
     width: 100%;
   }
   .contactBx .contactForm .textarea {
@@ -2250,7 +2249,7 @@
   .contactBx .contactForm__btn {
     margin: 1rem 0;
     padding: 1rem 2rem;
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .footer__media-item--svg {
     width: 1.5rem;
@@ -2328,7 +2327,7 @@
     margin: 2rem auto;
   }
   .aboutUs__container .grid__text {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .aboutUs__container .c-tromb .group-photos__item {
     max-width: 80%;
@@ -2349,6 +2348,9 @@
   }
   .contactBx .contactForm__input-label {
     font-size: 2.5vh;
+  }
+  .contactBx .contactForm .textarea {
+    height: 36vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */
