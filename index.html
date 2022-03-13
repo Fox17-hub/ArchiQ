@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Arch-IQ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
@@ -55,7 +56,7 @@
             <div class="banner__contentBx">
                 <h2 class="banner__title">Intelligence at it's finest</h2>
                 <p class="banner__subtitle">From flesh to silicon</p>
-                <a class="banner__icn" href="#activities"><i class="fa fa-angle-double-down"></i></a>
+                <a class="banner__icn" aria-label="banner__icn" href="#activities"><i class="fa fa-angle-double-down"></i></a>
             </div>
         </div>
         <section aria-labelledby="activities" class="section activities">
@@ -595,7 +596,7 @@
                                         </select>
                                     </div>
                                     <div class="contactForm__inputBx">
-                                        <label for="email" class="contactForm__input-label">Message</label>
+                                        <label for="message" class="contactForm__input-label">Message</label>
                                         <textarea name="message" id="message" cols="30" rows="10"
                                             placeholder="Your message here"
                                             class="contactForm__input textarea"></textarea>
@@ -603,7 +604,6 @@
                                 </fieldset>
 
                                 <button class="contactForm__btn">Send</button>
-                                <!-- <a href="" class="contactForm__btn">Send</a> -->
                             </form>
                         </div>
 
@@ -648,36 +648,44 @@
     <footer class="footer">
 
         <div class="backgroundBlur"></div>
-        <ul class="footer__lists">
-            <ul class="footer__list">
+        <div class="footer__lists">
+            <div class="footer__list">
                 <p class="footer__list-title">Products</p>
-                <li class="footer__list-item">Archetypes</li>
-                <li class="footer__list-item">Robots</li>
-                <li class="footer__list-item">Biotechs</li>
-                <li class="footer__list-item">Smarthomes</li>
-                <li class="footer__list-item">Aircrafts & Spacecrafts</li>
-            </ul>
-            <ul class="footer__list">
+                <ul class="list">
+                    <li class="footer__list-item">Archetypes</li>
+                    <li class="footer__list-item">Robots</li>
+                    <li class="footer__list-item">Biotechs</li>
+                    <li class="footer__list-item">Smarthomes</li>
+                    <li class="footer__list-item">Aircrafts & Spacecrafts</li>
+                </ul>
+            </div>
+            <div class="footer__list">
                 <p class="footer__list-title">Services</p>
-                <li class="footer__list-item">For people</li>
-                <li class="footer__list-item">For companies</li>
-                <li class="footer__list-item">For cities</li>
-            </ul>
-            <ul class="footer__list">
+                <ul class="list">
+                    <li class="footer__list-item">For people</li>
+                    <li class="footer__list-item">For companies</li>
+                    <li class="footer__list-item">For cities</li>
+                </ul>
+            </div>
+            <div class="footer__list">
                 <p class="footer__list-title">Support</p>
-                <li class="footer__list-item">Community</li>
-                <li class="footer__list-item">Downloads</li>
-                <li class="footer__list-item">FAQ</li>
-                <li class="footer__list-item">GDPR</li>
-            </ul>
-            <ul class="footer__list">
+                <ul class="list">
+                    <li class="footer__list-item">Community</li>
+                    <li class="footer__list-item">Downloads</li>
+                    <li class="footer__list-item">FAQ</li>
+                    <li class="footer__list-item">GDPR</li>
+                </ul>
+            </div>
+            <div class="footer__list">
                 <p class="footer__list-title">Company</p>
-                <li class="footer__list-item">Our story</li>
-                <li class="footer__list-item">Newsletter</li>
-                <li class="footer__list-item">Student Programs</li>
-                <li class="footer__list-item">Careers</li>
-            </ul>
-        </ul>
+                <ul class="list">
+                    <li class="footer__list-item">Our story</li>
+                    <li class="footer__list-item">Newsletter</li>
+                    <li class="footer__list-item">Student Programs</li>
+                    <li class="footer__list-item">Careers</li>
+                </ul>
+            </div>
+        </div>
         <ul class="footer__media">
             <li class="footer__media-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                     class="footer__media-item--svg">
