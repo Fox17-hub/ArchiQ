@@ -439,7 +439,7 @@ displaybBottomSlide() {
   
   responsiveAlert(){
     const body = document.querySelector('.body');
-    console.log(screen.orientation.type === "landscape-primary");
+    // console.log(screen.orientation.type === "landscape-primary");
     if(window.screen.width < 970 && window.screen.height < 480 && screen.orientation.type === 'landscape-primary'){
 
         const alertBx = document.createElement('div');
@@ -451,12 +451,14 @@ displaybBottomSlide() {
         }
     }
     else{
-        const alertBx = document.querySelector('.alertBx');
-        if(body.contains(alertBx)){
-          alertBx.remove();
-          body.classList.remove('body__modal-open');
-          console.log(body.contains(alertBx));
-        }
+        const alertBxs = document.querySelectorAll('.alertBx');
+        alertBxs.forEach(alertBx => {          
+          if(body.contains(alertBx)){
+            alertBx.remove();
+            body.classList.remove('body__modal-open');
+            console.log(body.contains(alertBx));
+          }
+        });
     }
   }
 }
