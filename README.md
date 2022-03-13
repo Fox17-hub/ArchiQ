@@ -9,8 +9,6 @@ This is a solution to a single page site front-end challenge I gave myself.
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -38,42 +36,30 @@ Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to t
 Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
 
-### Links
+### Liens
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## My process
+## Mon process
 
-### Built with
+### Technologie utilisées
 
 - Semantic HTML5 markup
-- SCSS
+- SCSS/SASS
 - BEM methodology
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Desktop-first workflow
 - pure JS
 - [Splide](https://splidejs.com) - Typescript library
 - [GLaDOS Voice Generator](https://glados.c-net.org) - Text-to-Speech engine
 
 
-### What I learned
+Pour le recap complet du procédé de réalisation de ce projet, c'est par [ici](https://.com) ! 
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-#### If I had to do it all over again
-I would start with optimizing images. As I've recently learned to use Chrome's Lighthouse, I would correct every img size to improve overall performances.
-
-### Continued development
-
-I consider this project done as the scope of technical practice is limited compared to what I've learned since. The only major improvment will be code refactoring as I started this project way before I started my Fullstack JS bootcamp and this will be an amazing exercice about working on junior legacy code.
-
-## Author
-
-- Website - [Khadim Renahy-Mar](https://www.your-site.com)
-- Linkedin - [Khadim Renahy-Mar]()
+## Auteur
+- Website : [Khadim Renahy-Mar](https://www.your-site.com)
+- Linkedin : [Khadim Renahy-Mar]()
 
 ## Acknowledgments
 
