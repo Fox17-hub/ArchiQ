@@ -16,6 +16,7 @@ let app = {
     app.orderHandler();
 
     app.responsiveCirclesHandler();
+    app.responsiveAlertHandler();
   },
 
   navHandler() {
@@ -427,6 +428,34 @@ displaybBottomSlide() {
     if(window.screen.width > 970){
       bx.removeChild(circle);
       text.before(circle);
+    }
+  },
+
+  responsiveAlertHandler(){
+    window.addEventListener('resize', app.responsiveAlert);
+    window.addEventListener("DOMContentLoaded", app.responsiveAlert);
+    console.log('trig');
+  },
+  
+  responsiveAlert(){
+    const body = document.querySelector('.body');
+    
+    if(window.screen.width < 790 && window.screen.height < 480){
+        const alertBx = document.createElement('div');
+        alertBx.classList.add('alertBx');
+        body.classList.add('body__modal-open');
+        alertBx.textContent = `Navré, ce site n'est pas optimisé pour les mobiles en position paysage ! Passez en mode portrait ou utilisez un écran plus grand !`;
+        if(body.contains(alertBx) === false){
+          body.append(alertBx);
+        }
+    }
+    else{
+        const alertBx = document.querySelector('.alertBx');
+        if(body.contains(alertBx)){
+          alertBx.remove();
+          body.classList.remove('body__modal-open');
+          console.log(body.contains(alertBx));
+        }
     }
   }
 }
