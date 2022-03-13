@@ -439,13 +439,14 @@ displaybBottomSlide() {
   
   responsiveAlert(){
     const body = document.querySelector('.body');
-    
-    if(window.screen.width < 790 && window.screen.height < 480){
+    console.log(screen.orientation.type === "landscape-primary");
+    if(window.screen.width < 970 && window.screen.height < 480 && screen.orientation.type === 'landscape-primary'){
+
         const alertBx = document.createElement('div');
         alertBx.classList.add('alertBx');
         body.classList.add('body__modal-open');
         alertBx.textContent = `Navré, ce site n'est pas optimisé pour les mobiles en position paysage ! Passez en mode portrait ou utilisez un écran plus grand !`;
-        if(body.contains(alertBx) === false){
+        if(!body.contains(alertBx)){
           body.append(alertBx);
         }
     }
