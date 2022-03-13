@@ -44,16 +44,18 @@ let app = {
         nav.style.display = 'none';
         if(window.screen.width < 970){
           navBx.style.margin = '0';
+          
           header.style.alignItems = "center";
           header.style.flexDirection = "row";
-          navBtn.style.transform = 'translate(0rem)';
           header.append(navBtn);
+
+          navBtn.style.transform = 'translate(0rem)';
           
-        logoTitle.style.transform = 'translate(0rem)';
+          logoTitle.style.transform = 'translate(0rem)';
           
           navBar.append(navBx);
           navBar.style.width = '100%';
-        navBar.style.marginLeft = '0';
+          navBar.style.marginLeft = '0';
           navBar.style.flexDirection = 'column';
           // console.log('close');
         }
@@ -62,10 +64,13 @@ let app = {
       nav.style.display = 'flex';
       if(window.screen.width < 970){
         header.style.flexDirection = "column";
+        
         navBtn.style.transform = 'translate(4rem)';
         navBx.style.margin = '2rem 0 0';
+
         logoTitle.after(navBtn);
-        logoTitle.style.transform = 'translate(5.1rem)';
+        // logoTitle.style.transform = 'translate(5.1rem)';
+        
         navBar.after(navBx);
         navBar.style.flexDirection = 'initial';
         // console.log('open');
@@ -153,56 +158,110 @@ displaybBottomSlide() {
 
     modal.classList.toggle('showModal');
     let contentBx = modal.childNodes[1];
-
-    if (contentBx.classList.contains('modal__contentBx--right')) {
-      setTimeout(() => {
-        contentBx.style.left = "25%";
-      }, 50);
-      switch (contentBx.style.left) {
-        case '25%':
-          setTimeout(() => {
-            contentBx.style.left = "100%";
-          }, 100);
-          break;
-        case '100%':
-          setTimeout(() => {
-            contentBx.style.left = "25%";
-          }, 50);
-          break;
-      }
-      let closeIcn = contentBx.childNodes[5];
-      closeIcn.addEventListener('click', () => {
-        contentBx.style.left = "100%";
+    
+    if(window.screen.width > 970){
+      if (contentBx.classList.contains('modal__contentBx--right')) {
         setTimeout(() => {
-          modal.classList.remove('showModal');
-          body.classList.remove('body__modal-open');
-        }, 200);
-      })
-    } else if (contentBx.classList.contains('modal__contentBx--left')) {
+          contentBx.style.left = "25%";
+        }, 50);
+        switch (contentBx.style.left) {
+          case '25%':
+            setTimeout(() => {
+              contentBx.style.left = "100%";
+            }, 100);
+            break;
+          case '100%':
+            setTimeout(() => {
+              contentBx.style.left = "25%";
+            }, 50);
+            break;
+        }
+        let closeIcn = contentBx.childNodes[5];
+        closeIcn.addEventListener('click', () => {
+          contentBx.style.left = "100%";
+          setTimeout(() => {
+            modal.classList.remove('showModal');
+            body.classList.remove('body__modal-open');
+          }, 200);
+        })
+      } else if (contentBx.classList.contains('modal__contentBx--left')) {
 
-      setTimeout(() => {
-        contentBx.style.right = "25%";
-      }, 50);
-      switch (contentBx.style.right) {
-        case '25%':
-          setTimeout(() => {
-            contentBx.style.right = "100%";
-          }, 100);
-          break;
-        case '100%':
-          setTimeout(() => {
-            contentBx.style.right = "25%";
-          }, 50);
-          break;
-      }
-      let closeIcn = contentBx.childNodes[5];
-      closeIcn.addEventListener('click', () => {
-        contentBx.style.right = "100%";
         setTimeout(() => {
-          modal.classList.remove('showModal');
-          body.classList.remove('body__modal-open');
-        }, 200);
-      })
+          contentBx.style.right = "25%";
+        }, 50);
+        switch (contentBx.style.right) {
+          case '25%':
+            setTimeout(() => {
+              contentBx.style.right = "100%";
+            }, 100);
+            break;
+          case '100%':
+            setTimeout(() => {
+              contentBx.style.right = "25%";
+            }, 50);
+            break;
+        }
+        let closeIcn = contentBx.childNodes[5];
+        closeIcn.addEventListener('click', () => {
+          contentBx.style.right = "100%";
+          setTimeout(() => {
+            modal.classList.remove('showModal');
+            body.classList.remove('body__modal-open');
+          }, 200);
+        })
+      }
+    }
+    else if(window.screen.width < 970){
+      if (contentBx.classList.contains('modal__contentBx--right')) {
+        setTimeout(() => {
+          contentBx.style.left = "0%";
+        }, 50);
+        switch (contentBx.style.left) {
+          case '0%':
+            setTimeout(() => {
+              contentBx.style.left = "100%";
+            }, 100);
+            break;
+          case '100%':
+            setTimeout(() => {
+              contentBx.style.left = "0%";
+            }, 50);
+            break;
+        }
+        let closeIcn = contentBx.childNodes[5];
+        closeIcn.addEventListener('click', () => {
+          contentBx.style.left = "100%";
+          setTimeout(() => {
+            modal.classList.remove('showModal');
+            body.classList.remove('body__modal-open');
+          }, 200);
+        })
+      } else if (contentBx.classList.contains('modal__contentBx--left')) {
+
+        setTimeout(() => {
+          contentBx.style.right = "0%";
+        }, 50);
+        switch (contentBx.style.right) {
+          case '0%':
+            setTimeout(() => {
+              contentBx.style.right = "100%";
+            }, 100);
+            break;
+          case '100%':
+            setTimeout(() => {
+              contentBx.style.right = "0%";
+            }, 50);
+            break;
+        }
+        let closeIcn = contentBx.childNodes[5];
+        closeIcn.addEventListener('click', () => {
+          contentBx.style.right = "100%";
+          setTimeout(() => {
+            modal.classList.remove('showModal');
+            body.classList.remove('body__modal-open');
+          }, 200);
+        })
+      }
     }
 
     let body = document.querySelector('.body');

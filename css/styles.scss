@@ -82,7 +82,7 @@
     top: 0; 
     display: flex;
     align-items: center;
-    padding: 2rem 4rem;
+    padding: 1rem 4rem;
     box-shadow: 0px 2px 30px 0px black;
     background-color: rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease-in-out;
@@ -555,6 +555,7 @@
             left: 3%;
             align-items: center;
             text-align: justify;
+            hyphens: auto;
             padding: 5rem;
             background: rgba(0, 0, 0, 0.7);
             overflow: hidden;
@@ -564,7 +565,8 @@
         .slide__text {
             color: white;
             text-align: justify;
-
+            hyphens: auto;
+            word-spacing: 0px;
             &--orange {
                 color: $coolOrange;
             }
@@ -607,6 +609,7 @@
         width: 100%;
         font-size: 20px;
         text-align: justify;
+        hyphens: auto;
     }
 
     .pia {
@@ -737,6 +740,7 @@
 
             font-size: 20px;
             text-align: justify;
+            hyphens: auto;
             color: white;
 
             &--left {
@@ -785,6 +789,7 @@
             position: relative;
             font-size: 20px;
             text-align: justify;
+            hyphens: auto;
             left: 0%;
         }
 
@@ -792,6 +797,7 @@
             font-size: 1.5rem;
             margin: 5rem auto;
             text-align: justify;
+            hyphens: auto;
         }
 
         &__order-button {
@@ -1063,6 +1069,7 @@
         position: relative;
         width: 50%;
         text-align: justify;
+        hyphens: auto;
         font-size: 20px;
         color: white;
 
@@ -1202,9 +1209,9 @@
         margin: 1rem 0 2rem;
         justify-content: flex-end;
         align-items: center;
+        flex-wrap: wrap;
         &-item{
             display: flex;
-            height: 2.5rem;
             padding: 0.5rem;
             border-radius: 1rem;
             margin: 0 2rem;
@@ -1213,6 +1220,10 @@
             transform: scale(1.5);
             box-shadow: 0px 0px 5px black;
             // background-color: rgba(255, 255, 255, 0.5);
+            &--svg{
+                width: 1rem;
+                height: 1rem;
+            }
             &:hover{
                 background-color: white;
                 fill: $coolOrange !important;
@@ -1768,30 +1779,30 @@
     .activities .splide__slide__container .slide__contentBx .slide__header .slide__title {
         font-size: 4.5vw;
     }
-
+    
     .activities .splide__slide__container .slide__contentBx .slide__textBx {
         left: 50vw !important;
         width: 45vw !important;
     }
-
-    .archetypes .section__contentBx--transparentBg {
-        width: 90%;
-        margin: auto;
-    }
-
-    .activities .splide__slide__container .slide__hiddenBx{
-        display: block;
-        width: 150% !important;
-        height: 100%;
-        left: 0 !important;
-        padding: 10vw !important;
-        padding-top: 25rem !important;
-    }
-
+    
     .activities .splide__slide__container .slide__contentBx .slide__header .slide__nPage{
         font-size: 3vw;
     }
-
+    
+        .archetypes .section__contentBx--transparentBg {
+            width: 90%;
+            margin: auto;
+        }
+    
+        .activities .splide__slide__container .slide__hiddenBx{
+            display: block;
+            width: 150% !important;
+            height: 100%;
+            left: 0 !important;
+            padding: 10vw !important;
+            padding-top: 25rem !important;
+        }
+    
     .archetypes .pia,
     .archetypes .eva {
         display: flex;
@@ -1814,7 +1825,8 @@
         left: 0 !important;
     }
     .archetypes .section__text{
-        text-align: center;
+        text-align: justify;
+        hyphens: auto;
     }
 
     .archetypes .AI__order-button{
@@ -1832,11 +1844,18 @@
     .archetypes .AI__desc{
         font-size: 2vh;
     }
-
+    .modal__contentBx{
+        width: 100% !important;
+        border-radius: 0;
+        padding: 1rem;
+    }
+    .modal .close-icon{
+        top: 0;
+    }
     .aboutUs__container .values,
     .aboutUs__container .results {
         left: 0;
-        margin: 5rem auto;
+        margin: 1rem auto;
         width: 90%;
     }
 
@@ -1960,9 +1979,14 @@
     }
 
     .aboutUs__container .c-tromb .group-photos__item{
-        max-width: 50%;
+        max-width: 60%;
     }
-
+    .aboutUs__container .grid__title{
+        font-size: 5vw !important;
+    }
+    .aboutUs__container .grid__text{
+        font-size: 3vw;
+    }
     .contactBx .contactForm__input-label{
         font-size: 3.5vw;
     }
@@ -1979,14 +2003,23 @@
         padding: 1rem 2rem;
         font-size: 3vw;
     }
+
+    .footer{
+        &__media{
+            &-item{
+                &--svg{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
-
-    .contactBx .contactForm__input-label{
-        font-size: 2.5vh;
+    .banner__contentBx .banner__title{
+        font-size: 3rem;
     }
-    
     .banner__icn {
         top: 15vh !important;
         font-size: 5rem !important;
@@ -2006,74 +2039,82 @@
         width: 3rem !important;
         box-shadow: 0px 0px 5px black !important;
     }
-
+    
     .activities .splide__slide{
         box-shadow: inset 7px 0px 10px 0px black, inset -5px 0px 10px 0px black;
     }
-
+    
     .splide__slide__container>.slide__img,
     .splide__slide__container>.slide__img {
         opacity: 0.25;
     }
-
+    
     .slide__contentBx,
     .slide__contentBx {
         opacity: 1 !important;
     }
-
+    
     .activities .splide__slide__container .slide__contentBx .slide__header {
         width: 100vw;
         height: 25%;
         top: 25%;
         left: 50vw;
     }
-
+    
     .activities .splide__slide__container .slide__contentBx .slide__header .slide__nPage{
         top: 1.5rem;
         left: 80%;  
         font-size: 3vh;
     }
     .activities .splide__slide__container .slide__contentBx .slide__header .slide__title{
-        font-size: 4.5vh !important;
+        font-size: 4.3vh !important;
         left: 5% !important;
         top: 40%;
     }
     .activities .splide__slide__container .slide__contentBx .slide__header .slide__sub-title{
-        font-size: 3.5vh;
-        left: 25%;
+        font-size: 3vh;
+        left: 20%;
         top: 65%;
     }
     .activities .splide__slide__container .slide__contentBx .slide__textBx {
-        width: 70vw !important;
+        width: 75vw !important;
     }
-    .activities .splide__slide__container .slide__hiddenBx{
-        left: -20% !important;
-        width: 100%;
-    }
-
+    
     .activities .splide__slide__container .slide__hiddenBx{
         position: absolute;
         padding: 4vh !important;
         width: 100% !important;
         left: 0 !important;
-        height: 25%;
-        top: 70%;
+        top: 65%;
     }
     
     .aboutUs__container .values, .aboutUs__container .results{
         margin: 2rem auto;
     }
-
+    .aboutUs__container .grid__text {
+        font-size: 3vw;
+    }
+    
     .aboutUs__container .c-tromb .group-photos__item{
         max-width: 80%;
     }
+    .aboutUs__container .c-tromb .group__text{
+        font-size: 1.5rem;
+    }
+    .contactBx__textBx--first::before{
+        width: 100vw;
+    }
     .contactBx__textBx{
         margin: 0;
-        width: 100%;
+        width: 100vw;
         border-radius: 0;
     }
-
+    
     .contactBx .contactForm{
         margin-bottom: 2rem;
+    }
+    
+    .contactBx .contactForm__input-label{
+        font-size: 2.5vh;
     }
 }
