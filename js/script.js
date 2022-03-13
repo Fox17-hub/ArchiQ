@@ -440,8 +440,7 @@ displaybBottomSlide() {
   responsiveAlert(){
     const body = document.querySelector('.body');
     // console.log(screen.orientation.type === "landscape-primary");
-    if(window.screen.width < 970 && window.screen.height < 480 && screen.orientation.type === 'landscape-primary'){
-
+    if(window.screen.width < 970 && window.screen.height < 480 && screen.orientation.type === 'landscape-primary'){    
         const alertBx = document.createElement('div');
         alertBx.classList.add('alertBx');
         body.classList.add('body__modal-open');
@@ -451,13 +450,12 @@ displaybBottomSlide() {
         }
     }
     else{
+
         const alertBxs = document.querySelectorAll('.alertBx');
-        alertBxs.forEach(alertBx => {          
-          if(body.contains(alertBx)){
+        alertBxs.forEach(alertBx => {
             alertBx.remove();
             body.classList.remove('body__modal-open');
             console.log(body.contains(alertBx));
-          }
         });
     }
   }
