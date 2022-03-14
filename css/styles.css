@@ -1550,6 +1550,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   /* The Close Button */
 }
 
@@ -1560,7 +1562,7 @@
   border: 0;
   -webkit-box-shadow: 0px 0px 5px white;
           box-shadow: 0px 0px 5px white;
-  background-color: rgba(13, 7, 104, 0.95);
+  background-color: rgba(255, 255, 255, 0.7);
   width: 50%;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -1594,6 +1596,7 @@
   font-size: 2.5rem;
   margin: 2rem 0;
   text-align: center;
+  color: #f18f01;
 }
 
 .modal .features__list-item {
@@ -1607,8 +1610,8 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  color: rgba(0, 0, 0, 0.7);
   top: 10%;
-  color: #aaa;
   font-size: 3rem;
   cursor: pointer;
 }
@@ -1623,6 +1626,10 @@
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+}
+
+.modal .close-icon:hover {
+  color: #f18f01;
 }
 
 .modal .close:hover,

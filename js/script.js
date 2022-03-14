@@ -11,6 +11,7 @@ let app = {
     
     app.displayMainSplide();
     app.displaybBottomSlide();
+
     app.modalHandler();
     app.audioHandler();
     app.orderHandler();
@@ -30,7 +31,6 @@ let app = {
 
   toggleNav() {
     const nav = document.querySelector('nav');
-    // console.log(window.screen.width);
     const logoTitle = document.querySelector('.nav__logo');
     const header = document.querySelector('.header');
     const navBtn = document.querySelector('.nav-btn');
@@ -70,7 +70,6 @@ let app = {
         navBx.style.margin = '2rem 0 0';
 
         logoTitle.after(navBtn);
-        // logoTitle.style.transform = 'translate(5.1rem)';
         
         navBar.after(navBx);
         navBar.style.flexDirection = 'initial';
@@ -83,7 +82,6 @@ let app = {
     }
   },
 
-  //grab array of splide cards (li) > pick the right one > expand(add class ".target" and modify ".contentBx" properties)
   expandHandler() {
     app.navUl = [].slice.call(document.querySelectorAll('.splide__list > li'));
     app.navUl.forEach(el => {
@@ -154,7 +152,6 @@ displaybBottomSlide() {
     let circleParent = circle.parentNode;
     let siblings = circleParent.childNodes;
 
-    console.log(siblings);
     let modal = siblings[5];
 
     modal.classList.toggle('showModal');
@@ -177,7 +174,7 @@ displaybBottomSlide() {
             }, 50);
             break;
         }
-        let closeIcn = contentBx.childNodes[5];
+        let closeIcn = contentBx.childNodes[7];
         closeIcn.addEventListener('click', () => {
           contentBx.style.left = "100%";
           setTimeout(() => {
@@ -285,7 +282,6 @@ displaybBottomSlide() {
 
       if (app.audioplayed === 0) {
         const piaAudio = new Audio('./audio/GLaDOS-389678.wav');
-        console.log(piaAudio);
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed += 1;
@@ -295,29 +291,21 @@ displaybBottomSlide() {
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed += 1;
-        console.log(app.audioplayed);
-        console.log(piaAudio);
       } else if (app.audioplayed >= 2 && app.audioplayed <= 4) {
-        console.log('coucou');
         piaAudio = new Audio('./audio/GLaDOS-389685.wav');
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed += 1;
-        console.log(app.audioplayed);
-        console.log(piaAudio);
       } else if (app.audioplayed === 5) {
         piaAudio = new Audio('./audio/GLaDOS-389700.wav');
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed += 1;
-        console.log(app.audioplayed);
-        console.log(piaAudio);
       } else if (app.audioplayed === 6) {
         piaAudio = new Audio('./audio/GLaDOS-389734.wav');
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed = 0;
-        console.log(app.audioplayed);
       }
     }
 
@@ -328,7 +316,6 @@ displaybBottomSlide() {
 
   evaAudio() {
     if (app.audioCount === 1) {
-      console.log('pause');
       audio.pause();
     }
 
@@ -337,7 +324,6 @@ displaybBottomSlide() {
 
       if (app.audioplayed === 0) {
         piaAudio = new Audio('./audio/GLaDOS-389680.wav');
-        console.log(piaAudio);
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed += 1;
@@ -346,32 +332,23 @@ displaybBottomSlide() {
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed += 1;
-        console.log(app.audioplayed);
-        console.log(piaAudio);
       } else if (app.audioplayed >= 2 && app.audioplayed <= 4) {
-        console.log('coucou');
         piaAudio = new Audio('./audio/GLaDOS-389685.wav');
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed += 1;
-        console.log(app.audioplayed);
-        console.log(piaAudio);
       } else if (app.audioplayed === 5) {
         piaAudio = new Audio('./audio/GLaDOS-389700.wav');
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed += 1;
-        console.log(app.audioplayed);
-        console.log(piaAudio);
       } else if (app.audioplayed === 6) {
         piaAudio = new Audio('./audio/GLaDOS-389734.wav');
         piaAudio.play();
         app.audioCount = 1;
         app.audioplayed = 0;
-        console.log(app.audioplayed);
       }
     }
-    console.log(app.audioplayed);
     setTimeout(() => {
       app.audioCount = 0;
     }, 4000);
@@ -407,9 +384,7 @@ displaybBottomSlide() {
     let attribModal = document.querySelector('.attribMod');
     attribModal.classList.toggle('showModal');
     let closeIcn = document.querySelector('.attribMod__close-icon');
-    console.log(closeIcn);
     closeIcn.addEventListener('click', () => {
-      console.log('lol');
         setTimeout(() => {
           attribModal.classList.remove('showModal');
           body.classList.remove('body__modal-open');
@@ -434,7 +409,6 @@ displaybBottomSlide() {
   responsiveAlertHandler(){
     window.addEventListener('resize', app.responsiveAlert);
     window.addEventListener("DOMContentLoaded", app.responsiveAlert);
-    console.log('trig');
   },
   
   responsiveAlert(){
@@ -455,7 +429,6 @@ displaybBottomSlide() {
         alertBxs.forEach(alertBx => {
             alertBx.remove();
             body.classList.remove('body__modal-open');
-            console.log(body.contains(alertBx));
         });
     }
   }
