@@ -5,7 +5,8 @@
   "main": "script.js",
   "dependencies": {
     "@splidejs/splide": "^3.1.7",
-    "@splidejs/splide-extension-auto-scroll": "^0.3.3"
+    "@splidejs/splide-extension-auto-scroll": "^0.3.3",
+    "tinyify": "^3.0.0"
   },
   "devDependencies": {},
   "scripts": {

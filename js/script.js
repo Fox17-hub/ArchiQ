@@ -391,7 +391,6 @@ displaybBottomSlide() {
         }, 200);
       })
   },
-
   responsiveCirclesHandler(){
     let circle = document.querySelector('.circle--left');
     let text = document.querySelector('.AI-info--left');
