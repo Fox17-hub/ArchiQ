@@ -8,5 +8,7 @@
     "CSS",
     "SCSS"
   ],
-  "packages": []
+  "packages": [],
+  "designPatterns":[],
+  "components":[]
 }
