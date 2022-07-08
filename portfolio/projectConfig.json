@@ -1,4 +1,7 @@
 {
+  "url": "https://khadimrenahymar.github.io/Arch-iQ/",
+  "coverURL: "https://github.com/KhadimRenahyMar/Arch-iQ/blob/main/portfolio/screenshots/landing.png?raw=true",
+  "size": "S",
   "desc": "What if a tech company made the perfect AI ?",
   "techs": [
     "JS",
@@ -6,5 +9,5 @@
     "CSS",
     "SCSS"
   ],
-  "url": "https://khadimrenahymar.github.io/Arch-iQ/"
+  "packages": []
 }
