@@ -20,6 +20,6 @@
             "packages": []
         }
     ],
-    "designPatterns": [],
+    "designPatterns": ["variables SCSS"],
     "components": []
 }
