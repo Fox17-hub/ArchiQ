@@ -9,7 +9,7 @@
         },
         {
             "name": "Javascript",
-            "packages": []
+            "packages": ["splideJS"]
         },
         {
             "name": "CSS",
