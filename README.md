@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![https://github.com/KhadimRenahyMar/Arch-iQ/blob/main/portfolio/screenshots/landing.png?raw=true](./screenshot.jpg)
+![](https://github.com/KhadimRenahyMar/Arch-iQ/blob/main/portfolio/screenshots/landing.png?raw=true)
 
 
 ### Liens
