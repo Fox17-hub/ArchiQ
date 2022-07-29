@@ -21,5 +21,5 @@
         }
     ],
     "designPatterns": ["variables SCSS"],
-    "components": []
+    "components": ["Slideshow", "Landing Page", "Formulaire", "Modale", "Navigation"]
 }
