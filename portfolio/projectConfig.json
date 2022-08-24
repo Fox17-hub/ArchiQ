@@ -2,6 +2,7 @@
     "url": "https://khadimrenahymar.github.io/Arch-iQ/",
     "coverURL": "https://raw.githubusercontent.com/KhadimRenahyMar/Arch-iQ/main/portfolio/screenshots/0cover.webp",
     "size": "M",
+    "mainTechs": ["Javascript", "SCSS"],
     "techs": [
         {
             "name": "HTML",
